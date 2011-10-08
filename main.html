@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="Description" content="" />
+	<title>screen04</title>
+	<link href='css/main.css' rel="stylesheet" type="text/css" />
+
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href='css/ie7.css' /><![endif]-->
+
+	<link rel="Shortcut Icon" type="image/x-icon" href="" />
+	<script type="text/javascript">
+		var $ = function(s) {return document.querySelector(s)};
+
+		window.onload = function() {
+			var mid = $('.page-mid'),
+					top = $('.page-top'),
+					bot = $('.page-bot');
+
+			mid.style.height = document.body.clientHeight - (top.clientHeight + bot.clientHeight) + 'px';
+		};
+	</script>
+</head>
+<body>
+
+<div id="page">
+
+	<div class="page-top">
+		<div class="nav-container">
+			<div class="nav-active"></div>
+			<ul class="nav">
+				<li><a href="#">Карта</a></li>
+				<li><a href="#">Устройства</a></li>
+				<li><a href="#">Зоны</a></li>
+				<li><a href="#">Группы</a></li>
+			</ul>
+		</div>
+
+		<div class="logo">
+			<a href="#"><img src="" alt="InnaVatson - сложное просто" /></a>
+		</div>
+	</div>
+	<div class="page-mid">
+		<div class="page-mid-inner">
+			a
+		</div>
+	</div>
+	<div class="page-bot">
+		<!--additional blocks-->
+	</div>
+
+</div>
+
+</body>
+</html>
+<!--TODO: Dev.complete = {combine css into single file} -->

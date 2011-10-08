@@ -1,0 +1,20 @@
+/* MOD_PAGE_MID
+--------------------------------*/
+.page-mid {
+	padding: 0 5px;
+	height: 100px; /*recalculated with js*/
+
+	background: #cc4444;
+	background: -moz-linear-gradient(top, #cc4444 0%, #b52525 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cc4444), color-stop(100%,#b52525));
+	background: -webkit-linear-gradient(top, #cc4444 0%,#b52525 100%);
+	background: -o-linear-gradient(top, #cc4444 0%,#b52525 100%);
+	background: -ms-linear-gradient(top, #cc4444 0%,#b52525 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc4444', endColorstr='#b52525',GradientType=0 );
+	background: linear-gradient(top, #cc4444 0%,#b52525 100%);
+}
+
+.page-mid-inner {
+	background: #fff;
+	height: 100%;
+}

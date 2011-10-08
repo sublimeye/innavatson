@@ -1,0 +1,10 @@
+/* MOD_PAGE_TOP
+--------------------------------*/
+.page-bot {
+	min-height: 25px;
+	background: #B52525;
+	-moz-border-bottom-left-radius: 15px;
+	-moz-border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
