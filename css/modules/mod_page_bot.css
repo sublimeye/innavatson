@@ -8,3 +8,32 @@
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
 }
+
+/* slider
+--------------------------------*/
+.slider {
+	height: 123px;
+	margin: 0 5px;
+}
+
+.slider-outer {
+	padding-top: 3px;
+	background: #fff;
+	width: 100%;
+	overflow: hidden;
+	height: 95px;
+}
+
+.slider-inner {
+	width: 3000px;
+}
+
+.slider-item {
+	float: left;
+	width: 600px;
+	background: blue;
+	margin-right: 20px;
+}
+
+/* timeline
+--------------------------------*/

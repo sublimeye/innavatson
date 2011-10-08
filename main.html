@@ -6,18 +6,25 @@
 	<title>screen04</title>
 	<link href='css/main.css' rel="stylesheet" type="text/css" />
 
-	<!--[if IE 7]><link rel="stylesheet" type="text/css" href='css/ie7.css' /><![endif]-->
+	<!--[if IE 8]><link rel="stylesheet" type="text/css" href='css/ie8.css' /><![endif]-->
+	<!--[if IE]><link rel="stylesheet" type="text/css" href='css/ie.css' /><![endif]-->
 
 	<link rel="Shortcut Icon" type="image/x-icon" href="" />
 	<script type="text/javascript">
 		var $ = function(s) {return document.querySelector(s)};
-
-		window.onload = function() {
+		var setHeight = function() {
 			var mid = $('.page-mid'),
 					top = $('.page-top'),
 					bot = $('.page-bot');
 
 			mid.style.height = document.body.clientHeight - (top.clientHeight + bot.clientHeight) + 'px';
+		};
+
+		window.onload = function() {
+			setHeight();
+		};
+		window.onresize = function() {
+			setHeight();
 		};
 	</script>
 </head>
@@ -26,28 +33,63 @@
 <div id="page">
 
 	<div class="page-top">
+		<div class="logo">
+			<a href="#"><img src="img/p_logo.png" width="155" height="52" alt="InnaVatson - сложное просто" /></a>
+		</div>
+
 		<div class="nav-container">
-			<div class="nav-active"></div>
-			<ul class="nav">
-				<li><a href="#">Карта</a></li>
+			<div class="nav-active-item">карта</div>
+			<ul class="nav-items">
+				<li class="active"><a href="#">Карта</a></li>
 				<li><a href="#">Устройства</a></li>
 				<li><a href="#">Зоны</a></li>
 				<li><a href="#">Группы</a></li>
 			</ul>
 		</div>
-
-		<div class="logo">
-			<a href="#"><img src="" alt="InnaVatson - сложное просто" /></a>
-		</div>
 	</div>
 	<div class="page-mid">
 		<div class="page-mid-inner">
-			a
+			<div class="map-container map-container--wide g-hidden">
+				<img src="img/_map.jpg"  alt="" />
+			</div>
+
 		</div>
 	</div>
 	<div class="page-bot">
 		<!--additional blocks-->
-	</div>
+		<div class="slider g-hidden">
+			<div class="slider-outer">
+				<div class="slider-inner">
+					<ul class="slider-list">
+						<li class="slider-item">
+							<a class="slider-item-link" href="#">
+								<img class="slider-item-image" src="" alt="" />
+								<i class="slider-item-ico ico-user"></i>
+								<span class="slider-item-title">Светлана Петрова</span>
+							</a>
+						</li>
+						<!-- === -->
+						<li class="slider-item">
+							<a class="slider-item-link" href="#">
+								<img class="slider-item-image" src="" alt="" />
+								<i class="slider-item-ico ico-car"></i>
+								<span class="slider-item-title">Светлана Петрова</span>
+							</a>
+						</li>
+						<!-- === -->
+						<li class="slider-item">
+							<a class="slider-item-link" href="#">
+								<img class="slider-item-image" src="" alt="" />
+								<i class="slider-item-ico ico-present"></i>
+								<span class="slider-item-title">Светлана Петрова</span>
+							</a>
+						</li>
+						<!-- === -->
+					</ul>
+				</div>
+			</div>
+		</div><!--//slider-->
+	</div><!--//page-bot-->
 
 </div>
 

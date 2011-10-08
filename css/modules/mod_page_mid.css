@@ -1,8 +1,14 @@
 /* MOD_PAGE_MID
 --------------------------------*/
 .page-mid {
+	position: relative;
+	z-index: 100;
 	padding: 0 5px;
+	width: 100%;
 	height: 100px; /*recalculated with js*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 
 	background: #cc4444;
 	background: -moz-linear-gradient(top, #cc4444 0%, #b52525 100%);
@@ -15,6 +21,28 @@
 }
 
 .page-mid-inner {
-	background: #fff;
+	width: 100%;
 	height: 100%;
+	padding: 3px;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	background: #fff;
+}
+
+.map-container {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: white;
+	border: 1px solid #BCB8AF;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.map-container img {
+	display: block;
 }
