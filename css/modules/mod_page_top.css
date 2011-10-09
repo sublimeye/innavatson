@@ -2,9 +2,9 @@
 --------------------------------*/
 .page-top {
 	height: 60px;
-	background: #D54D4D;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
+	background-image: url(../../img/bg_header.png);
 }
 
 .nav-container {

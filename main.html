@@ -30,6 +30,17 @@
 </head>
 <body>
 
+<div id="switcher">
+	<ul>
+		<li><a href="#d0">1</a></li>
+		<li><a href="#d1">2</a></li>
+		<li><a href="#d2">3</a></li>
+		<li><a href="#d3">4</a></li>
+		<li><a href="#d4">5</a></li>
+		<li><a href="#d5">6</a></li>
+	</ul>
+</div>
+
 <div id="page">
 
 	<div class="page-top">
@@ -61,7 +72,7 @@
 				</ul>
 			</div>
 
-			<div class="content-short-outer g-hidden device-0">
+			<div id="d0" class="content-short-outer g-hidden device-0">
 				<div class="heading clearfix">
 					<div class="btn fl-right"><button>Добавить устройство</button></div>
 				</div>
@@ -119,7 +130,7 @@
 				</table>
 			</div>
 
-			<div class="content-short-outer g-hidden device-1">
+			<div id="d1" class="content-short-outer g-hidden device-1">
 				<div class="heading clearfix">
 					<div class="btn ico-cancel fl-right"><button><i class="ico"></i>Отмена</button></div>
 					<div class="btn ico-next fl-left"><button><i class="ico"></i>Далее</button></div>
@@ -130,11 +141,11 @@
 				<p>Введите номер DID, нажмите кнопку "Далее", на телефон администратора придет приемный код, который необходимо будет ввести на следующем экране</p>
 			</div>
 
-			<div class="content-short-outer g-hidden device-2">
+			<div id="d2" class="content-short-outer g-hidden device-2">
 				<div class="heading clearfix">
-					<div class="btn btn--green ico-confirm fl-right"><button><i class="ico"></i>Подтвердить</button></div>
-					<div class="btn ico-prev fl-left"><button><i class="ico"></i>Назад</button></div>
-					<h2>Подтверждение</h2>
+					<div class="btn btn--green ico-save fl-right"><button><i class="ico"></i>Сохранить</button></div>
+					<div class="btn ico-cancel fl-left"><button><i class="ico"></i>Отмена</button></div>
+					<h2>Устройство 1: настройка</h2>
 				</div>
 
 				<div class="grad-grey ui-bar device-heading">Код <input type="text" value="898465456" /></div>
@@ -144,7 +155,7 @@
 				</p>
 			</div>
 
-			<div class="content-short-outer g-hidden device-3">
+			<div id="d3" class="content-short-outer g-hidden device-3">
 				<table class="table-data" cellspacing="0">
 					<thead>
 						<tr class="grad-grey">
@@ -158,30 +169,30 @@
 					<tbody>
 					<tr>
 						<td>1 <a class="ico ico-ordering" href="#"></a></td>
-						<td><a class="ico ico-edit" href="#"></a>Автомобиль 1</td>
+						<td><span class="action-ico"><a class="ico ico-edit" href="#"></a></span>Автомобиль 1</td>
 						<td>Петров Александр Ростиславович</td>
 						<td><span class="txt-device-on">включен</span></td>
-						<td><a class="cancel-link" href="#">Скрыть</a></td>
+						<td><a href="#">Скрыть</a></td>
 					</tr>
 					<tr>
 						<td>2 <a class="ico ico-ordering" href="#"></a></td>
-						<td><a class="ico ico-edit" href="#"></a>Автомобиль 1</td>
+						<td><span class="action-ico"><a class="ico ico-edit" href="#"></a></span>Автомобиль 1</td>
 						<td>Петров Александр Ростиславович</td>
 						<td><span class="txt-device-on">включен</span></td>
-						<td><a class="cancel-link" href="#">Скрыть</a></td>
+						<td><a href="#">Скрыть</a></td>
 					</tr>
 					<tr>
 						<td>3 <a class="ico ico-ordering" href="#"></a></td>
-						<td><a class="ico ico-save" href="#"></a>Автомобиль 1</td>
+						<td><span class="action-ico"><a class="ico ico-save" href="#"></a></span><input type="text" value="Автомобиль 1" /></td>
 						<td>Петров Александр Ростиславович</td>
 						<td><span class="txt-device-on">включен</span></td>
-						<td><a class="cancel-link" href="#">Скрыть</a></td>
+						<td><a href="#">Скрыть</a></td>
 					</tr>
 					</tbody>
 				</table>
 			</div>
 
-			<div class="content-short-outer device-4">
+			<div id="d4" class="content-short-outer g-hidden device-4">
 				<div class="user-devices-outer">
 					<div class="user-profile">
 						<a href="#">
@@ -190,41 +201,42 @@
 						</a>
 					</div>
 
-					<table class="user-devices-table table-data" cellspacing="0">
-						<colgroup>
-							<col width="20%" />
-						</colgroup>
-						<thead>
+					<div class="user-devices-inner">
+						<table class="user-devices-table table-data" cellspacing="0">
+							<colgroup>
+								<col width="20%" />
+							</colgroup>
+							<thead>
 							<tr class="grad-grey">
 								<th>Показать</th>
 								<th>Имя устройства</th>
 								<th>Статус</th>
 							</tr>
-						</thead>
-						<tbody>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td>Автомобиль 1</td>
-							<td><span class="txt-device-on">включен</span></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td>Автомобиль 1</td>
-							<td><span class="txt-device-off">включен</span></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td>Автомобиль 1</td>
-							<td><span class="txt-device-off">включен</span></td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" /></td>
-							<td>Автомобиль 1</td>
-							<td><span class="txt-device-off">включен</span></td>
-						</tr>
-						</tbody>
-					</table>
-				</div>
+							</thead>
+							<tbody>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Автомобиль 1</td>
+								<td><span class="txt-device-on">включен</span></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Автомобиль 1</td>
+								<td><span class="txt-device-off">включен</span></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Автомобиль 1</td>
+								<td><span class="txt-device-off">включен</span></td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" /></td>
+								<td>Автомобиль 1</td>
+								<td><span class="txt-device-off">включен</span></td>
+							</tr>
+							</tbody>
+						</table>
+					</div>				</div>
 				<!-- user details -->
 					<div class="user-profile">
 						<a href="#">
@@ -233,16 +245,17 @@
 						</a>
 					</div>
 
+				<div class="user-devices-inner">
 					<table class="user-devices-table table-data" cellspacing="0">
 						<colgroup>
 							<col width="20%" />
 						</colgroup>
 						<thead>
-							<tr class="grad-grey">
-								<th>Показать</th>
-								<th>Имя устройства</th>
-								<th>Статус</th>
-							</tr>
+						<tr class="grad-grey">
+							<th>Показать</th>
+							<th>Имя устройства</th>
+							<th>Статус</th>
+						</tr>
 						</thead>
 						<tbody>
 						<tr>
@@ -267,8 +280,102 @@
 						</tr>
 						</tbody>
 					</table>
-				</div>
+				</div>				</div>
 				<!-- user details -->
+
+			<div id="d5" class="content-short-outer g-hidden device-5">
+				<div class="heading clearfix">
+					<div class="btn btn--green ico-save fl-right"><button><i class="ico"></i>Сохранить</button></div>
+					<div class="btn ico-cancel fl-left"><button><i class="ico"></i>Отмена</button></div>
+					<h2>Устройство 1: настройка</h2>
+				</div>
+
+				<table class="table-grid" cellspacing="0">
+					<colgroup>
+						<col width="22%" />
+						<col  />
+						<col width="28%" />
+					</colgroup>
+					<tbody>
+					<tr>
+						<td>Номер DID</td>
+						<td>
+							<div class="r-col">
+								<div class="helper-outer ico ico-helper js-hover">
+									<div class="helper">
+										<div class="helper-content">На телефон администратора устройства пришел временный код введите его и нажмите "Подтвердить".
+											<br /> Если код не пришел, нажмите "Назад" и повторите попытку.</div>
+									</div>
+								</div>
+							</div>
+							<div class="lm-columns">
+								<div class="l-col">
+									<div class="ui-wide"><input type="text" value="4554" disabled="disabled" /></div>
+								</div>
+								<div class="m-col">
+									<div class="m-col-inner">
+										<div class="ui-button-wide">
+											<div class="btn btn--small">
+												<button class="">Получить новый DID</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</td>
+						<td class="xxx-smaller notify-col">Статус: <span class="txt-device-on">Включен</span></td>
+					</tr>
+					<tr>
+						<td>Имя устройства</td>
+						<td>
+							<div class="ui-wide"><input type="text" value="Устройство 1" /></div></td>
+						<td class="e"></td>
+					<tr>
+						<td>Группа</td>
+						<td>
+							<select class="wide" name="" id="">
+								<option value="">Для всех</option>
+								<option value="">Только для меня</option>
+								<option value="">Для меня и моих друзей</option>
+								<option value="">Для группы 1</option>
+							</select>
+						</td>
+						<td class="e"></td>
+					</tr>
+					<tr>
+						<td>Режим</td>
+						<td>
+							<select class="wide" name="" id="">
+								<option value="">Отправлять каждую минуту</option>
+								<option value="">Отправлять каждый день</option>
+								<option value="">Отправлять всегда</option>
+								<option value="">Не отправлять</option>
+							</select>
+						</td>
+						<td class="notify-col">
+							<div class="helper-outer ico ico-helper">
+								<div class="helper">
+									<div class="helper-content">На телефон администратора устройства пришел временный код введите его и нажмите "Подтвердить". Если код не пришел, нажмите "Назад" и повторите попытку.</div>
+								</div>
+							</div>
+							&nbsp; 6 часов
+						</td>
+					</tr>
+					<tr>
+						<td>Телефон</td>
+						<td><div class="ui-wide"><input type="text" value="745658995462" disabled="disabled" /></div></td>
+						<td class="e"></td>
+					</tr>
+					<tr>
+						<td>Иконка</td>
+						<td class="xxx-smaller" colspan="2"><i class="ico ico-user"></i> &nbsp; <a onclick="$('#device-icon-select').style.display = 'block'; return false;" href="#">Изменить</a></td>
+						<td class="e"></td>
+					</tr>
+
+					</tbody>
+				</table>
+			</div>
 
 		</div>
 	</div>
@@ -309,6 +416,40 @@
 	</div><!--//page-bot-->
 
 </div>
+
+	<div class="w-popup w-confirm g-hidden">
+		<div class="w-popup-inner">
+			<div class="w-popup-close"><i class="ico ico-close"></i></div>
+			<div class="w-popup-title grad-red">Удаление группы</div>
+			<div class="w-popup-content clearfix">
+				<p>Вы хотите удалить группу <span class="del-group-title">Группа 1</span>?</p>
+
+				<div class="wider">
+					<div class="btn fl-left btn--grey">
+						<button>Отмена</button>
+					</div>
+					<div class="btn fl-right btn--green">
+						<button>Подтвердить</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="w-popup w-view w-device-icons g-hidden" id="device-icon-select">
+		<div class="w-popup-inner">
+			<div class="w-popup-title grad-red">Выбрать иконку</div>
+			<div class="w-popup-content clearfix">
+				<div class="device-icons-inner">
+					<a class="device-icon" href="#"><i class="ico ico-user"></i></a>
+					<a class="device-icon" href="#"><i class="ico ico-auto"></i></a>
+					<a class="device-icon" href="#"><i class="ico ico-present"></i></a>
+					<a class="device-icon" href="#"><i class="ico ico-bug"></i></a>
+					<a class="device-icon" href="#"><i class="ico ico-groups"></i></a></div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>

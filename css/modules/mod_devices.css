@@ -2,146 +2,82 @@
 
 /* sidebar short
 --------------------------------*/
-.sidebar-nav-outer {
-	float: left;
-	width: 175px;
-	margin-right: -100%;
-}
-
-.sidebar-nav li {
-	font-size: 13px;
-	font-size: 1.3rem;
-}
-
-.sidebar-nav a {
-	display: inline-block;
-	padding: 6px 15px;
-	color: #fff;
-	text-decoration: none;
-}
-
-.sidebar-nav li a:hover {
-	color: #FFF991;
-}
-
-.sidebar-nav .active a:hover {
-	color: inherit;
-	cursor: default;
-}
-
-.sidebar-nav .active {
-	background: #fff;
-	border: 1px solid #BABABA;
-	border-right: 0;
-}
-.sidebar-nav .active a {
-	color: #5a6e82;
-}
-
+.sidebar-nav-outer{float:left;width:175px;margin-right:-100%}
+.sidebar-nav li{font-size:13px;font-size:1.3rem}
+.sidebar-nav a{display:inline-block;padding:6px 15px;color:#fff;text-decoration:none}
+.sidebar-nav li a:hover{color:#FFF991}
+.sidebar-nav .active a:hover{color:inherit;cursor:default}
+.sidebar-nav .active{background:#fff;border:1px solid #BABABA;border-right:0;filter: none}
+.sidebar-nav .active a{color:#5a6e82}
 
 /* content short
 --------------------------------*/
-.content-short-outer {
-	margin-left:174px;
-	padding: 6px 9px 0;
-	height: 100%;
-	overflow: auto;
-
-	box-sizing: border-box;
-	border: 1px solid #BABABA;
-}
-
-.content-short-outer p {
-	font-size: 12px;
-	font-size: 1.2rem;
-}
-
-.heading {
-	text-align: center;
-	padding: 15px 0;
-}
-
-.heading h2 {
-	text-align: center;
-	display: inline-block;
-	line-height: 35px;
-	line-height: 3.5rem;
-}
-
-.device-heading {
-	margin-bottom: 20px;
-	text-align: center;
-}
-
-.device-heading input {
-	margin-left: 1rem;
-}
+.content-short-outer{margin-left:174px;padding:6px 9px 0;height:100%;overflow:auto;box-sizing:border-box;border:1px solid #BABABA}
+.content-short-outer p{font-size:12px;font-size:1.2rem}
+.heading{text-align:center;padding:15px 0}
+.heading h2{text-align:center;display:inline-block;line-height:35px;line-height:3.5rem}
+.device-heading{margin-bottom:20px;text-align:center}
+.device-heading input{margin-left:1rem}
 
 /* user devices list/table
 --------------------------------*/
-.user-profile {
-	font-size: 10px;
-	font-size: 1rem;
-	width: 65px;
-	float: left;
-	margin-right: -100%;
-	line-height: 1.2;
-	color: #1c1c1c;
-}
-
-.user-profile a {
-	color: #1c1c1c;
-	text-decoration: none;
-}
-
-.user-profile a:hover {
-	color: #a91926;
-
-}
-
-.user-profile img {
-	padding: 1px;
-	border: 1px solid #C4C4C4;
-}
-
-.user-profile a:hover img {
-	padding: 1px;
-	border: 1px solid #C33130;
-}
-
-.user-devices-table {
-	margin-left: 65px;
-	margin-bottom: 30px;
-}
+.user-profile{font-size:10px;font-size:1rem;width:65px;float:left;margin-right:-100%;line-height:1.2;color:#1c1c1c}
+.user-profile a{color:#1c1c1c;text-decoration:none}
+.user-profile a:hover{color:#a91926}
+.user-profile img{padding:1px;border:1px solid #C4C4C4}
+.user-profile a:hover img{padding:1px;border:1px solid #C33130}
+.user-devices-inner{margin-left:65px}
+.user-devices-table{margin-bottom:30px}
 
 /* table-data
 --------------------------------*/
-.table-data {
-	width: 100%;
-	font-size: 11px;
-	font-size: 1.1rem;
+.table-data{width:100%;font-size:11px;font-size:1.1rem}
+.table-data th,.table-data td,.table-grid td{padding:4px 10px;vertical-align:middle}
+.table-data th{text-align:left}
+.table-data tr:nth-child(2n+2) td,.table-grid tr:nth-child(2n+2) td{background:#EFEFEF}
+.table-data tr:hover td{background:#FFF9DE}
+
+.action-ico {
+	display: inline-block;
+	width: 30px;
 }
 
-.table-data th, .table-data td {
-	padding: 3px 10px;
+/* table-grid
+--------------------------------*/
+.table-grid{width:100%;font-size:12px;font-size:1.2rem}
+.table-grid .e{padding:0}
+.table-grid .notify-col{padding-left:30px}
+
+/* columns
+--------------------------------*/
+.lm-columns{overflow:hidden}
+.l-col{float:left;width:30%}
+.m-col{float:left;width:70%}
+.m-col-inner{margin:0 5px 0 10px}
+.r-col{float:right;width:20px}
+
+/* device icon (popup)
+--------------------------------*/
+.w-popup.w-device-icons {
+	left: 20%;
 }
 
-.table-data th {
-	text-align: left;
+.device-icon {
+	display: inline-block;
+	width: 40px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
 }
 
-.txt-device-on {
-	color: #3d8900;
+.device-icons-inner {
+	text-align: center;
 }
 
-.txt-device-off {
-	color: #bababa;
-}
-
-.table-data tr:nth-child(2n+2) td {
+.device-icon:hover {
 	background: #EFEFEF;
 }
 
-.table-data tr:hover td {
-	background: #FFF9DE;
+.w-device-icons .w-popup-content {
+	padding: 10px 5px;
 }

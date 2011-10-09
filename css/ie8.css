@@ -1,2 +1,8 @@
 .nav-active-item {
 	top: -3px;
+}
+
+.helper, .w-popup-inner {
+	border-left: 1px solid #F2F2F2;
+	border-right: 1px solid #F2F2F2;
+}

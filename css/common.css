@@ -20,9 +20,7 @@ html[xmlns] .clearfix{display:block}
 
 /*   Base layout
 --------------------------------*/
-html, body {
-	height: 100%;
-}
+html, body { height: 100%; }
 
 #page {
 	position: relative;
@@ -30,14 +28,53 @@ html, body {
 	min-height: 100%;
 }
 
-.g-hidden {
-	display: none;
-}
-
+.g-hidden { display: none; }
 .g-center {text-align: center}
 
 .fl-left {float: left}
 .fl-right {float:right}
+
+.txt-device-on { color: #3d8900; }
+.txt-device-off { color: #bababa; }
+
+.xxx-smaller {
+	font-size: 11px;
+	font-size: 1.1rem;
+}
+
+.wide {
+	width: 100%;
+}
+
+#switcher {
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1000;
+}
+
+/* SWITCHER
+--------------------------------*/
+#switcher li  {
+	float: left;
+	color: blue;
+	margin-right: 15px;
+}
+#switcher li  a{
+	color: blue;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#d0:target {display: block;}
+#d1:target {display: block;}
+#d2:target {display: block;}
+#d3:target {display: block;}
+#d4:target {display: block;}
+#d5:target {display: block;}
+
+/* SWITCHER
+--------------------------------*/
 
 /*   Typography & Colors
 *    (c) SublimeYe, 2011
