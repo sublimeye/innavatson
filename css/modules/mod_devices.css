@@ -1,0 +1,147 @@
+/* MOD_DEVICES
+
+/* sidebar short
+--------------------------------*/
+.sidebar-nav-outer {
+	float: left;
+	width: 175px;
+	margin-right: -100%;
+}
+
+.sidebar-nav li {
+	font-size: 13px;
+	font-size: 1.3rem;
+}
+
+.sidebar-nav a {
+	display: inline-block;
+	padding: 6px 15px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.sidebar-nav li a:hover {
+	color: #FFF991;
+}
+
+.sidebar-nav .active a:hover {
+	color: inherit;
+	cursor: default;
+}
+
+.sidebar-nav .active {
+	background: #fff;
+	border: 1px solid #BABABA;
+	border-right: 0;
+}
+.sidebar-nav .active a {
+	color: #5a6e82;
+}
+
+
+/* content short
+--------------------------------*/
+.content-short-outer {
+	margin-left:174px;
+	padding: 6px 9px 0;
+	height: 100%;
+	overflow: auto;
+
+	box-sizing: border-box;
+	border: 1px solid #BABABA;
+}
+
+.content-short-outer p {
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+.heading {
+	text-align: center;
+	padding: 15px 0;
+}
+
+.heading h2 {
+	text-align: center;
+	display: inline-block;
+	line-height: 35px;
+	line-height: 3.5rem;
+}
+
+.device-heading {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.device-heading input {
+	margin-left: 1rem;
+}
+
+/* user devices list/table
+--------------------------------*/
+.user-profile {
+	font-size: 10px;
+	font-size: 1rem;
+	width: 65px;
+	float: left;
+	margin-right: -100%;
+	line-height: 1.2;
+	color: #1c1c1c;
+}
+
+.user-profile a {
+	color: #1c1c1c;
+	text-decoration: none;
+}
+
+.user-profile a:hover {
+	color: #a91926;
+
+}
+
+.user-profile img {
+	padding: 1px;
+	border: 1px solid #C4C4C4;
+}
+
+.user-profile a:hover img {
+	padding: 1px;
+	border: 1px solid #C33130;
+}
+
+.user-devices-table {
+	margin-left: 65px;
+	margin-bottom: 30px;
+}
+
+/* table-data
+--------------------------------*/
+.table-data {
+	width: 100%;
+	font-size: 11px;
+	font-size: 1.1rem;
+}
+
+.table-data th, .table-data td {
+	padding: 3px 10px;
+}
+
+.table-data th {
+	text-align: left;
+}
+
+.txt-device-on {
+	color: #3d8900;
+}
+
+.txt-device-off {
+	color: #bababa;
+}
+
+.table-data tr:nth-child(2n+2) td {
+	background: #EFEFEF;
+}
+
+.table-data tr:hover td {
+	background: #FFF9DE;
+}

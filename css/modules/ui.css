@@ -28,6 +28,13 @@
 
 /* Button icons
 --------------------------------*/
+.ico {
+	display: inline-block;
+	width: 21px;
+	height: 20px;
+	background: #fe55fe;
+}
+
 .btn .ico {
 	position: relative;
 	top: 2px;
@@ -39,55 +46,55 @@
 	background: url("../../img/btn_icons.png") no-repeat;
 }
 
-.btn-ico-next .ico {
+.ico-next .ico {
 	float: right;
 	margin: 0 -5px 0 10px;
 }
 
-.btn-ico-save .ico {
+.ico-save .ico, .ico-save.ico {
 	background-position: -84px 0;
 	width: 17px;
 	height: 17px;
 	top: 4px
 }
 
-.btn-ico-prev .ico {
+.ico-prev .ico {
 	background-position: -42px 0
 }
 
-.btn-ico-next .ico {
+.ico-next .ico {
 	background-position: -21px 0
 }
 
-.btn-ico-cancel .ico {
+.ico-cancel .ico {
 	background-position: -63px 0
 }
 
-.btn-ico-confirm .ico {
+.ico-confirm .ico {
 	background-position: 0 0
 }
 
-.btn-ico-add .ico {
+.ico-add .ico {
 	background-position: -101px 0
 }
 
-.btn:active.btn-ico-prev .ico {
+.btn:active.ico-prev .ico {
 	background-position: -42px -20px
 }
 
-.btn:active.btn-ico-next .ico {
+.btn:active.ico-next .ico {
 	background-position: -21px -20px
 }
 
-.btn:active.btn-ico-cancel .ico {
+.btn:active.ico-cancel .ico {
 	background-position: -63px -20px
 }
 
-.btn:active.btn-ico-confirm .ico {
+.btn:active.ico-confirm .ico {
 	background-position: 0 -20px
 }
 
-.btn:active.btn-ico-add .ico {
+.btn:active.ico-add .ico {
 	background-position: -101px -20px
 }
 
@@ -219,7 +226,7 @@ input[type=text] {
 
 /* gradients
 --------------------------------*/
-.grad-grey {
+.grad-grey, .grad-grey th {
 	background: #dcdfe0;
 	background: -moz-linear-gradient(top, #dcdfe0 0%, #c1c5c7 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dcdfe0), color-stop(100%, #c1c5c7));
@@ -240,4 +247,19 @@ input[type=text] {
 	background: -ms-linear-gradient(top, #d76e6e 0%, #d25c5c 50%, #cc4545 50%, #cc4444 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#d76e6e', endColorstr = '#cc4444', GradientType = 0);
 	background: linear-gradient(top, #d76e6e 0%, #d25c5c 50%, #cc4545 50%, #cc4444 100%);
+}
+
+.ui-bar {
+	line-height: 32px;
+	line-height: 3.2rem;
+}
+
+.ui-bar.grad-grey {
+	font-size: 12px;
+	font-size: 1.2rem;
+	text-shadow: 0 1px 1px #EDEDED;
+}
+
+.grad-grey th {
+	text-shadow: 0 1px 1px #EDEDED;
 }

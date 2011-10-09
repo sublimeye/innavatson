@@ -53,6 +53,223 @@
 				<img src="img/_map.jpg"  alt="" />
 			</div>
 
+			<div class="sidebar-nav-outer">
+				<ul class="sidebar-nav">
+					<li class="grad-red"><a href="#">Видимые устройства</a></li>
+					<li class="grad-red active"><a href="#">Мои устройства</a></li>
+					<li class="grad-red"><a href="#">Устройства друзей</a></li>
+				</ul>
+			</div>
+
+			<div class="content-short-outer g-hidden device-0">
+				<div class="heading clearfix">
+					<div class="btn fl-right"><button>Добавить устройство</button></div>
+				</div>
+
+				<table class="table-data" cellspacing="0">
+					<thead>
+						<tr class="grad-grey">
+							<th>Показать</th>
+							<th>DID</th>
+							<th>Имя устройства</th>
+							<th>Телефон</th>
+							<th>Статус</th>
+							<th>Группа</th>
+							<th>Настройки</th>
+						</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>5455</td>
+						<td>Автомобиль</td>
+						<td>+784568844213</td>
+						<td><span class="txt-device-on">Включен</span></td>
+						<td>Для всех</td>
+						<td><a href="#">Изменить</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>5455</td>
+						<td>Автомобиль</td>
+						<td>+784568844213</td>
+						<td><span class="txt-device-off">Выключен</span></td>
+						<td>Для всех</td>
+						<td><a href="#">Изменить</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>5455</td>
+						<td>Автомобиль</td>
+						<td>+784568844213</td>
+						<td><span class="txt-device-off">Выключен</span></td>
+						<td>Для всех</td>
+						<td><a href="#">Изменить</a></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" /></td>
+						<td>5455</td>
+						<td>Автомобиль</td>
+						<td>+784568844213</td>
+						<td><span class="txt-device-off">Выключен</span></td>
+						<td>Для всех</td>
+						<td><a href="#">Изменить</a></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="content-short-outer g-hidden device-1">
+				<div class="heading clearfix">
+					<div class="btn ico-cancel fl-right"><button><i class="ico"></i>Отмена</button></div>
+					<div class="btn ico-next fl-left"><button><i class="ico"></i>Далее</button></div>
+					<h2>Добавить устройство</h2>
+				</div>
+
+				<div class="grad-grey ui-bar device-heading">Номер DID <input type="text" /></div>
+				<p>Введите номер DID, нажмите кнопку "Далее", на телефон администратора придет приемный код, который необходимо будет ввести на следующем экране</p>
+			</div>
+
+			<div class="content-short-outer g-hidden device-2">
+				<div class="heading clearfix">
+					<div class="btn btn--green ico-confirm fl-right"><button><i class="ico"></i>Подтвердить</button></div>
+					<div class="btn ico-prev fl-left"><button><i class="ico"></i>Назад</button></div>
+					<h2>Подтверждение</h2>
+				</div>
+
+				<div class="grad-grey ui-bar device-heading">Код <input type="text" value="898465456" /></div>
+				<p>На телефон администратора устройства пришел временный код, <br/> введите его и нажмите "Подтвердить".
+					<br/>
+					Если код не пришел, нажмите "Назад" и повторите попытку.
+				</p>
+			</div>
+
+			<div class="content-short-outer g-hidden device-3">
+				<table class="table-data" cellspacing="0">
+					<thead>
+						<tr class="grad-grey">
+							<th>Порядок</th>
+							<th>Имя устройства</th>
+							<th>Владелец</th>
+							<th>Статус</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>1 <a class="ico ico-ordering" href="#"></a></td>
+						<td><a class="ico ico-edit" href="#"></a>Автомобиль 1</td>
+						<td>Петров Александр Ростиславович</td>
+						<td><span class="txt-device-on">включен</span></td>
+						<td><a class="cancel-link" href="#">Скрыть</a></td>
+					</tr>
+					<tr>
+						<td>2 <a class="ico ico-ordering" href="#"></a></td>
+						<td><a class="ico ico-edit" href="#"></a>Автомобиль 1</td>
+						<td>Петров Александр Ростиславович</td>
+						<td><span class="txt-device-on">включен</span></td>
+						<td><a class="cancel-link" href="#">Скрыть</a></td>
+					</tr>
+					<tr>
+						<td>3 <a class="ico ico-ordering" href="#"></a></td>
+						<td><a class="ico ico-save" href="#"></a>Автомобиль 1</td>
+						<td>Петров Александр Ростиславович</td>
+						<td><span class="txt-device-on">включен</span></td>
+						<td><a class="cancel-link" href="#">Скрыть</a></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="content-short-outer device-4">
+				<div class="user-devices-outer">
+					<div class="user-profile">
+						<a href="#">
+							<img src="img/_user_avatar.jpg" width="50" height="50" alt="" />
+							<span>Елена Алексеева</span>
+						</a>
+					</div>
+
+					<table class="user-devices-table table-data" cellspacing="0">
+						<colgroup>
+							<col width="20%" />
+						</colgroup>
+						<thead>
+							<tr class="grad-grey">
+								<th>Показать</th>
+								<th>Имя устройства</th>
+								<th>Статус</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Автомобиль 1</td>
+							<td><span class="txt-device-on">включен</span></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Автомобиль 1</td>
+							<td><span class="txt-device-off">включен</span></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Автомобиль 1</td>
+							<td><span class="txt-device-off">включен</span></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Автомобиль 1</td>
+							<td><span class="txt-device-off">включен</span></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- user details -->
+					<div class="user-profile">
+						<a href="#">
+							<img src="img/_user_avatar.jpg" width="50" height="50" alt="" />
+							<span>Светлана Алексеева</span>
+						</a>
+					</div>
+
+					<table class="user-devices-table table-data" cellspacing="0">
+						<colgroup>
+							<col width="20%" />
+						</colgroup>
+						<thead>
+							<tr class="grad-grey">
+								<th>Показать</th>
+								<th>Имя устройства</th>
+								<th>Статус</th>
+							</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Автомобиль 1</td>
+							<td><span class="txt-device-on">включен</span></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Автомобиль 1</td>
+							<td><span class="txt-device-on">включен</span></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Автомобиль 1</td>
+							<td><span class="txt-device-on">включен</span></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" /></td>
+							<td>Автомобиль 1</td>
+							<td><span class="txt-device-on">включен</span></td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- user details -->
+
 		</div>
 	</div>
 	<div class="page-bot">
