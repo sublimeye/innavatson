@@ -60,11 +60,151 @@
 	</div>
 	<div class="page-mid">
 		<div class="page-mid-inner">
+
 			<div class="map-container map-container--wide g-hidden">
 				<img src="img/_map.jpg"  alt="" />
 			</div>
 
-			<div class="sidebar-nav-outer">
+			<div class="zones">
+				<div class="zones-settings">
+					<div class="zones-heading grad-red">
+						<div class="zones-switcher ui-switcher">
+							<div class="zones-switcher-active-item">Вкл.</div>
+							<ul class="zones-switcher-items">
+								<li class="active"><a href="#">Вкл.</a></li>
+								<li><a href="#">Выкл.</a></li>
+							</ul>
+						</div>
+						<h3 class="zones-heading-text">Настройки зоны</h3>
+					</div>
+
+					<div class="setting-section cf">
+						<div class="fl-left">
+							Имя зоны:
+						</div>
+						<div class="rc-full">
+							<div class="ui-wide"><input type="text" value="Зона 1" /></div>
+						</div>
+					</div>
+
+					<div class="setting-section cf">
+						Радиус: <span class="js-zone-radius">100 м</span>
+						<div class="helper-outer helper-small ico ico-helper js-hover">
+							<div class="helper">
+								<div class="helper-content">На телефон администратора устройства пришел временный код введите его и нажмите "Подтвердить".
+									<br /> Если код не пришел, нажмите "Назад" и повторите попытку.
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="subheading">
+						Для устройств:
+					</div>
+					<div class="devices-list-outer">
+						<ul class="devices-list">
+							<li>
+								<label><input type="checkbox" /> Устройство 1 (Друг 1)</label><span class="paid"><i class="ico ico-coins"></i> sms</span>
+							</li>
+							<li>
+								<label><input type="checkbox" /> Устройство 2 (Подруг 69)</label><span class="paid"><i class="ico ico-coins"></i> sms</span>
+							</li>
+						</ul>
+					</div>
+
+					<table class="notification-layout">
+						<colgroup>
+							<col width="100" />
+							<col />
+							<col width="35"/>
+						</colgroup>
+						<tr>
+							<td>Сообщать при:</td>
+							<td colspan="2">
+								<select name="" id="aa">
+									<option value="1">Входе</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Отправлять как:</td>
+							<td>
+								<select name="" id="aa">
+									<option value="1">SMS</option>
+								</select>
+							</td>
+							<td class="helper-cell">
+								<div class="helper-outer helper-small ico ico-helper js-hover">
+									<div class="helper">
+										<div class="helper-content">На телефон администратора устройства пришел временный код введите его и нажмите "Подтвердить".
+											<br /> Если код не пришел, нажмите "Назад" и повторите попытку.
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Иконка:</td>
+							<td colspan="2"><span class="settings-device-icon-container"><i class="ico ico-zone1"></i></span> &nbsp;<a href="#">Изменить</a></td>
+						</tr>
+					</table>
+
+					<div class="subheading">
+						<div class="helper-outer helper-small ico ico-helper fl-right js-hover">
+							<div class="helper">
+								<div class="helper-content">На телефон администратора устройства пришел временный код введите его и нажмите "Подтвердить".
+									<br /> Если код не пришел, нажмите "Назад" и повторите попытку.
+								</div>
+							</div>
+						</div>
+
+						<label><input type="checkbox" /> Планировщик</label>
+					</div>
+
+					<div class="setting-section setting-time">
+						От
+						<select name="" id="">
+							<option value="">8</option>
+						</select>
+						<select name="" id="">
+							<option value="">00</option>
+						</select>
+						&nbsp;&nbsp;
+						До
+						<select name="" id="">
+							<option value="">23</option>
+						</select>
+						<select name="" id="">
+							<option value="">00</option>
+						</select>
+					</div>
+
+					<div class="setting-section setting-weekdays">
+						<label><input type="checkbox" /> пн</label>
+						<label><input type="checkbox" /> вт</label>
+						<label><input type="checkbox" /> ср</label>
+						<label><input type="checkbox" /> чт</label>
+						<label><input type="checkbox" /> пт</label>
+						<label><input type="checkbox" /> сб</label>
+						<label><input type="checkbox" /> вс</label>
+					</div>
+
+					<div class="setting-section setting-actions">
+						<div class="fl-right btn btn--green ico-save"><button><i class="ico"></i>Сохранить</button></div>
+						<div class="fl-left btn btn--grey"><button>Отменить</button></div>
+					</div>
+
+				</div><!--//zones settings-->
+
+				<div class="zones-map">
+					<div class="zones-map-inner">
+						<img src="img/_map.jpg"  alt="" />
+					</div>
+				</div><!--//zones map-->
+
+			</div><!--//zones-->
+
+			<div class="sidebar-nav-outer g-hidden">
 				<ul class="sidebar-nav">
 					<li class="grad-red"><a href="#">Видимые устройства</a></li>
 					<li class="grad-red active"><a href="#">Мои устройства</a></li>
@@ -282,7 +422,6 @@
 					</table>
 				</div>				</div>
 				<!-- user details -->
-
 			<div id="d5" class="content-short-outer g-hidden device-5">
 				<div class="heading clearfix">
 					<div class="btn btn--green ico-save fl-right"><button><i class="ico"></i>Сохранить</button></div>
@@ -381,35 +520,91 @@
 	</div>
 	<div class="page-bot">
 		<!--additional blocks-->
-		<div class="slider g-hidden">
+		<div id="users-slider" class="slider g-hidden">
 			<div class="slider-outer">
 				<div class="slider-inner">
 					<ul class="slider-list">
 						<li class="slider-item">
 							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="" alt="" />
-								<i class="slider-item-ico ico-user"></i>
+								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
+								<span class="slider-item-ico"><i class="ico ico-user"></i></span>
 								<span class="slider-item-title">Светлана Петрова</span>
+							</a>
+						</li>
+						<!-- === -->
+						<li class="slider-item active">
+							<a class="slider-item-link" href="#">
+								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
+								<span class="slider-item-ico"><i class="ico ico-auto"></i></span>
+								<span class="slider-item-title">Устройство №2 на джипе</span>
 							</a>
 						</li>
 						<!-- === -->
 						<li class="slider-item">
 							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="" alt="" />
-								<i class="slider-item-ico ico-car"></i>
-								<span class="slider-item-title">Светлана Петрова</span>
-							</a>
-						</li>
-						<!-- === -->
-						<li class="slider-item">
-							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="" alt="" />
-								<i class="slider-item-ico ico-present"></i>
+								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
+								<span class="slider-item-ico"><i class="ico ico-present"></i></span>
 								<span class="slider-item-title">Светлана Петрова</span>
 							</a>
 						</li>
 						<!-- === -->
 					</ul>
+				</div>
+			</div><!--//slider-outer-->
+			<div class="slider-controls">
+				<div class="slider-prev"><i class="ico ico-sprev"></i></div>
+				<div class="slider-next"><i class="ico ico-snext"></i></div>
+				<div class="slider-scroll">
+					<div class="slider-scroll-inner">
+						<div class="slider-scroll-handler"></div>
+					</div>
+				</div>
+			</div>
+		</div><!--//slider-->
+
+		<!--additional blocks-->
+		<div class="slider slider--zones">
+			<div class="slider-outer">
+				<div class="slider-inner">
+					<ul class="slider-list">
+						<li class="slider-item add-zone">
+							<a class="slider-item-link" href="#">
+								<span class="figure"><i class="bico bico-addzone"></i></span>
+								<span class="slider-item-title">Добавить <br/>зону</span>
+							</a>
+						</li>
+						<!-- === -->
+						<li class="slider-item">
+							<a class="slider-item-link" href="#">
+								<span class="figure"><i class="bico bico-zone1"></i></span>
+								<span class="slider-item-title">Зона 1</span>
+							</a>
+						</li>
+						<!-- === -->
+						<li class="slider-item">
+							<a class="slider-item-link" href="#">
+								<span class="figure"><i class="bico bico-zone2"></i></span>
+								<span class="slider-item-title">Зона 2</span>
+							</a>
+						</li>
+						<!-- === -->
+						<li class="slider-item">
+							<a class="slider-item-link" href="#">
+								<span class="figure"><i class="bico bico-zone3"></i></span>
+								<span class="slider-item-title">Зона 3</span>
+							</a>
+						</li>
+						<!-- === -->
+					</ul>
+				</div>
+			</div><!--//slider-outer-->
+			<div class="slider-controls">
+				<div class="slider-prev"><i class="ico ico-sprev"></i></div>
+				<div class="slider-next"><i class="ico ico-snext"></i></div>
+				<div class="slider-scroll">
+					<div class="slider-scroll-inner">
+						<div class="slider-scroll-handler"></div>
+					</div>
 				</div>
 			</div>
 		</div><!--//slider-->

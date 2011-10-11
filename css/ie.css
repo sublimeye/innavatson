@@ -1,3 +1,8 @@
 .nav-active-item {
 	background: #979DA0 url("../img/bg_nav_active_item_ie.png") repeat-x top;
 }
+
+.setting-weekdays input {
+	margin-left:0;
+	margin-right: -1px;
+}

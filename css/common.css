@@ -1,3 +1,4 @@
+
 /*   Table of contents
 
 (c) SublimeYe, 2011
@@ -17,15 +18,25 @@ th,b,strong,h1,h2,h3,h4,h5,h6{font-weight:normal}
 .clearfix:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
 .clearfix{display:inline-block}
 html[xmlns] .clearfix{display:block}
-
+.cf:before, .cf:after {
+	content: '';
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
 /*   Base layout
 --------------------------------*/
 html, body { height: 100%; }
+body {min-height: 600px}
 
 #page {
 	position: relative;
 	min-width: 800px;
 	min-height: 100%;
+	/*strange IE9 behaviour, appear scroll bars */
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .g-hidden { display: none; }

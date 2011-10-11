@@ -1,48 +1,60 @@
 /* MOD_PAGE_MID
 --------------------------------*/
-.page-mid {
-	position: relative;
-	z-index: 100;
-	padding: 0 5px;
-	width: 100%;
-	height: 100px; /*recalculated with js*/
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+.page-mid {position:relative;z-index:100;padding:0 5px;width:100%;height:100px;webkit-box-sizing:border-box;moz-box-sizing:border-box;box-sizing:border-box;background:#cc4444;background:-moz-linear-gradient(top, #cc4444 0%, #b52525 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#cc4444), color-stop(100%,#b52525));background:-webkit-linear-gradient(top, #cc4444 0%,#b52525 100%);background:-o-linear-gradient(top, #cc4444 0%,#b52525 100%);background:-ms-linear-gradient(top, #cc4444 0%,#b52525 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc4444', endColorstr='#b52525',GradientType=0 );background:linear-gradient(top, #cc4444 0%,#b52525 100%);}
+.page-mid-inner {width:100%;height:100%;padding:3px;webkit-box-sizing:border-box;moz-box-sizing:border-box;box-sizing:border-box;background:#fff;}
+.map-container {width:100%;height:100%;overflow:hidden;background:white;border:1px solid #BCB8AF;webkit-box-sizing:border-box;moz-box-sizing:border-box;box-sizing:border-box;}
+.map-container img {display:block;}
 
-	background: #cc4444;
-	background: -moz-linear-gradient(top, #cc4444 0%, #b52525 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cc4444), color-stop(100%,#b52525));
-	background: -webkit-linear-gradient(top, #cc4444 0%,#b52525 100%);
-	background: -o-linear-gradient(top, #cc4444 0%,#b52525 100%);
-	background: -ms-linear-gradient(top, #cc4444 0%,#b52525 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc4444', endColorstr='#b52525',GradientType=0 );
-	background: linear-gradient(top, #cc4444 0%,#b52525 100%);
+/* ZONES
+--------------------------------*/
+.zones {height:100%;}
+.zones-settings {font-size:12px;font-size:1.2rem;float:left;width:273px;border:1px solid #C9C9C9;border-top:0;height:100%;padding:0 8px 10px 13px;webkit-box-sizing:border-box;moz-box-sizing:border-box;box-sizing:border-box;}
+.zones-map {height:100%;margin-left:277px;border:1px solid #BCB8AF;webkit-box-sizing:border-box;moz-box-sizing:border-box;box-sizing:border-box;}
+.zones-map-inner {width:100%;height:100%;overflow:hidden;}
+
+/* zones heading
+--------------------------------*/
+.zones-heading {height:30px;line-height:30px;margin:0 -10px 15px -13px;padding:0 12px 0 13px;}
+.zones-heading-text {font-size:14px;font-size:1.4rem;color:#fff;}
+
+/* zones switcher
+--------------------------------*/
+.zones-switcher-items li {float:left;}
+.zones-switcher-items a {position:relative;z-index:10;font-size:12px;font-size:1.2rem;display:inline-block;padding:0 10px;padding:0 1rem;height:100%;color:#F6E6E8;text-shadow:0 1px 1px #8B0611;text-decoration:none;}
+.zones-switcher-items a:hover {color:#F6E186;}
+.zones-switcher.ui-switcher {float:right;position:relative;z-index:20;margin:6px 0 0 0;height:1.4em;line-height:1.2em;background:#E57F7F;moz-border-radius:20px;border-radius:20px;}
+.zones-switcher-active-item {font-size:12px;font-size:1.2rem;line-height:1.8rem;position:absolute;top:-3px;left:-.2em;z-index:1;padding:0 10px;padding:0 1rem;background:#e0e2e3;background:-moz-linear-gradient(top, #e0e2e3 0%, #979da0 100%);background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#e0e2e3), color-stop(100%,#979da0));background:-webkit-linear-gradient(top, #e0e2e3 0%,#979da0 100%);background:-o-linear-gradient(top, #e0e2e3 0%,#979da0 100%);background:-ms-linear-gradient(top, #e0e2e3 0%,#979da0 100%);background:linear-gradient(top, #e0e2e3 0%,#979da0 100%);border:1px solid #EAEBEC;box-shadow:0 3px 3px #7C1C1C;moz-border-radius:10px;border-radius:10px;color:transparent}
+.zones-switcher-items .active a {text-shadow:0 1px 1px #DADCDE;color:#282d32;}
+.rc-full {padding:0 10px;overflow:hidden;}
+
+/* zones settings
+--------------------------------*/
+.setting-section { margin: 7px 0; }
+.paid { font-size: 12px; font-size: 1.2rem; vertical-align: bottom; color: #b12d2d; }
+
+/* subheading
+--------------------------------*/
+.subheading {padding: 0 5px 0 9px; height: 21px; height: 2.1rem; line-height: 21px; line-height: 2.1rem; margin-bottom:3px; vertical-align: middle; color: #2c2b2b; background: #f3f3f3; background: -moz-linear-gradient(top, #f3f3f3 0%, #e8e8e8 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f3f3f3), color-stop(100%,#e8e8e8)); background: -webkit-linear-gradient(top, #f3f3f3 0%,#e8e8e8 100%); background: -o-linear-gradient(top, #f3f3f3 0%,#e8e8e8 100%); background: -ms-linear-gradient(top, #f3f3f3 0%,#e8e8e8 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#e8e8e8',GradientType=0 ); background: linear-gradient(top, #f3f3f3 0%,#e8e8e8 100%); }
+.subheading label {
+	vertical-align: middle;
 }
+/* devices list
+--------------------------------*/
+.notification-layout, .devices-list-outer, .setting-time, .setting-weekdays { font-size: 11px; font-size: 1.1rem; }
+.devices-list-outer { min-height: 74px; margin-left: 5px; }
+.devices-list li { border-bottom: 1px dotted #929292; margin-right: 20px; padding: 1px 0; }
 
-.page-mid-inner {
-	width: 100%;
-	height: 100%;
-	padding: 3px;
+/* notification layout table
+--------------------------------*/
+.notification-layout {width:100%;}
+.notification-layout td {padding:4px 0;}
+.notification-layout select {width:100%;}
 
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+.helper-cell {text-align:right;}
+.helper-cell .helper-outer {margin-right:5px;text-align:left;}
 
-	background: #fff;
-}
-
-.map-container {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	background: white;
-	border: 1px solid #BCB8AF;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-.map-container img {
-	display: block;
-}
+.setting-actions {font-size:14px;font-size:1.4rem;}
+.setting-time {text-align:center;white-space:nowrap;}
+.setting-time select {width:40px;margin:0 3px 2px;}
+.setting-weekdays {text-align:center;white-space:nowrap;margin-bottom:2px;}
+.setting-weekdays input {display:inline-block;vertical-align:middle;margin-left:3px;}
