@@ -10,23 +10,6 @@
 	<!--[if IE]><link rel="stylesheet" type="text/css" href='css/ie.css' /><![endif]-->
 
 	<link rel="Shortcut Icon" type="image/x-icon" href="" />
-	<script type="text/javascript">
-		var $ = function(s) {return document.querySelector(s)};
-		var setHeight = function() {
-			var mid = $('.page-mid'),
-					top = $('.page-top'),
-					bot = $('.page-bot');
-
-			mid.style.height = document.body.clientHeight - (top.clientHeight + bot.clientHeight) + 'px';
-		};
-
-		window.onload = function() {
-			setHeight();
-		};
-		window.onresize = function() {
-			setHeight();
-		};
-	</script>
 </head>
 <body>
 
@@ -65,7 +48,7 @@
 				<img src="img/_map.jpg"  alt="" />
 			</div>
 
-			<div class="zones">
+			<div id="zones" class="zones g-hidden">
 				<div class="zones-settings">
 					<div class="zones-heading grad-red">
 						<div class="zones-switcher ui-switcher">
@@ -420,7 +403,8 @@
 						</tr>
 						</tbody>
 					</table>
-				</div>				</div>
+				</div>
+			</div>
 				<!-- user details -->
 			<div id="d5" class="content-short-outer g-hidden device-5">
 				<div class="heading clearfix">
@@ -516,6 +500,82 @@
 				</table>
 			</div>
 
+			<div id="groups" class="groups">
+				<!-- блок отоброжения групп -->
+				<div class="users-view">
+					<ul class="users-list clearfix">
+						<li>
+							<a class="user-add-pseudoico" href="#">+</a>
+							<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+							<span class="user-fn">Елена Алексеева</span>
+						</li>
+						<li>
+							<a class="user-add-pseudoico" href="#">+</a>
+							<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+							<span class="user-fn">Ольга Алексеева</span>
+						</li>
+						<li>
+							<a class="user-add-pseudoico" href="#">+</a>
+							<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+							<span class="user-fn">Иван Алексей</span>
+						</li>
+						<li>
+							<a class="user-add-pseudoico" href="#">+</a>
+							<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+							<span class="user-fn">Аэишлат Алексеев</span>
+						</li>
+					</ul>
+				</div>
+				<!-- блок редактирования групп -->
+				<div class="groups-edit-container">
+					<div class="btn ico-add btn-add-group"><button><i class="ico"></i>Добавить группу</button></div>
+					<div class="groups-edit-grid clearfix">
+						<ul class="groups-edit clearfix">
+							<li>
+								<div class="group-details">
+									<span class="group-title">Группа 1</span> <i class="ico ico-edit edit-group-title"></i>
+									<span class="group-users-count">(3 друга)</span>
+								</div>
+								<div class="group-remove">
+									<i class="ico ico-trash"></i> <a href="#">Удалить</a>
+								</div>
+								<ul class="group-users-list">
+									<li><i class="ico ico-remove"></i> Друг 11</li>
+									<li><i class="ico ico-remove"></i> Друг 22</li>
+									<li><i class="ico ico-remove"></i> Друг 33</li>
+								</ul>
+							</li>
+							<!--group-->
+							<li class="extended">
+								<div class="group-details">
+									<span class="group-title">Группа 1</span> <i class="ico ico-edit edit-group-title"></i>
+									<span class="group-users-count">(3 друга)</span>
+								</div>
+								<div class="group-remove">
+									<i class="ico ico-trash"></i> <a href="#">Удалить</a>
+								</div>
+								<ul class="group-users-list">
+									<li><i class="ico ico-remove"></i> Друг 1</li>
+									<li><i class="ico ico-remove"></i> Друг 2</li>
+									<li><i class="ico ico-remove"></i> Друг 3</li>
+								</ul>
+							</li>
+							<!--group-->
+							<li>
+								<div class="group-details">
+									<span class="group-title"><input type="text" value="Группа 3" /></span> <i class="ico ico-save edit-group-title"></i>
+									<span class="group-users-count">(3 друга)</span>
+								</div>
+								<div class="group-remove">
+									<i class="ico ico-trash"></i> <a href="#">Удалить</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
 		</div>
 	</div>
 	<div class="page-bot">
@@ -563,7 +623,7 @@
 		</div><!--//slider-->
 
 		<!--additional blocks-->
-		<div class="slider slider--zones">
+		<div class="slider slider--zones g-hidden">
 			<div class="slider-outer">
 				<div class="slider-inner">
 					<ul class="slider-list">
@@ -645,6 +705,22 @@
 			</div>
 		</div>
 	</div>
+
+<script type="text/javascript">
+	var $ = function(s) {return document.querySelector(s)};
+	var setHeight = function() {
+		var mid = $('.page-mid'),
+				top = $('.page-top'),
+				bot = $('.page-bot');
+
+		mid.style.height = document.body.clientHeight - (top.clientHeight + bot.clientHeight) + 'px';
+	};
+
+	setHeight();
+	window.onresize = function() {
+		setHeight();
+	};
+</script>
 
 </body>
 </html>

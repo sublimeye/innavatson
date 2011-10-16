@@ -58,3 +58,162 @@
 .setting-time select {width:40px;margin:0 3px 2px;}
 .setting-weekdays {text-align:center;white-space:nowrap;margin-bottom:2px;}
 .setting-weekdays input {display:inline-block;vertical-align:middle;margin-left:3px;}
+
+/* GROUPS
+--------------------------------*/
+.groups {
+	height: 100%;
+}
+
+.users-view {
+	height: 55%;
+	overflow: scroll;
+	border: 1px solid #BABABA;
+}
+
+.groups-edit-container {
+	height: 45%;
+	overflow: scroll;
+}
+
+.groups-edit-grid {
+	border: 1px solid #BABABA;
+}
+
+/* GROUPS: users-list
+--------------------------------*/
+.users-list li {
+	float: left;
+	border: 1px dotted #999999;
+	width: 240px;
+	height: 68px;
+	margin: 5px;
+	white-space: nowrap
+}
+
+.user-add-pseudoico {
+	text-decoration: none;
+	color: #6B6B6B;
+	font-size: 25px;
+	font-weight: bold;
+	padding: 10px 12px 0 15px;
+	vertical-align: middle;
+}
+
+.user-add-pseudoico:hover {
+	color:#C32F2F
+}
+
+.user-avatar {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 6px 20px 0 0;
+}
+.user-avatar img {
+	border: 1px solid #C4C4C4;
+	padding: 1px;
+}
+
+.user-fn {
+	font-size: 12px;
+	font-size: 1.2rem;
+	display: inline-block;
+	width: 90px;
+	white-space: normal;
+	vertical-align: middle;
+	line-height: 1.4em;
+}
+
+/* GROUPS: groups-edit
+--------------------------------*/
+.groups {
+	color: #1d1d1d;
+}
+.groups-edit li:hover:not(.extended) .group-title {
+	color: #b11d2c;
+}
+.btn-add-group {
+	margin: 10px 15px
+}
+.groups-edit li {
+	overflow: hidden;
+}
+.group-details {
+	position: relative;
+	float: left;
+	width: 100%;
+	line-height: 25px;
+	min-height: 25px;
+	margin-right: -135px;
+}
+.extended .group-details {
+	background: #dcdfe0;
+	background: -moz-linear-gradient(top, #dcdfe0 0%, #c1c5c7 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dcdfe0), color-stop(100%,#c1c5c7));
+	background: -webkit-linear-gradient(top, #dcdfe0 0%,#c1c5c7 100%);
+	background: -o-linear-gradient(top, #dcdfe0 0%,#c1c5c7 100%);
+	background: -ms-linear-gradient(top, #dcdfe0 0%,#c1c5c7 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcdfe0', endColorstr='#c1c5c7',GradientType=0 );
+	background: linear-gradient(top, #dcdfe0 0%,#c1c5c7 100%);
+}
+
+.extended {
+	border: 1px dotted #000;
+	border-width: 1px 0;
+}
+.group-details:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 5px;
+	height: 9px;
+	left:10px;
+	top: 7px;
+	background: url("../../img/small_icons.png") no-repeat -57px -105px;
+}
+.extended .group-details:before {
+	width: 9px;
+	height: 5px;
+	left:6px;
+	top: 9px;
+	background: url("../../img/small_icons.png") no-repeat -62px -105px;
+}
+.group-title {
+	font-size: 12px;
+	font-size: 1.2rem;
+	margin-left: 25px;
+}
+.group-users-count {
+	font-size: 11px;
+	font-size: 1.1rem;
+	color: #5b5b5b;
+}
+.group-remove {
+	position: relative;
+	float: right;
+	width: 100px;
+	line-height: 25px;
+	font-size: 11px;
+	font-size: 1.1rem;
+}
+.group-users-list li {
+	height: 25px;
+	line-height: 25px;
+	font-size: 12px;
+}
+.group-users-list li:nth-child(2n) {
+	background: #EFEFEF;
+
+}
+.group-users-list {
+	clear: both;
+	display: none;
+}
+.group-users-list li {
+	padding-left: 30px;
+}
+.extended .group-users-list {
+	display: block;
+}
+.group-title input {
+}

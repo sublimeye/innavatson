@@ -44,6 +44,8 @@
 .ico-ordering { margin-left: 5px; width: 6px; height: 18px; background-position:-32px -105px; }
 .ico-coins { width: 14px; height: 18px; margin-left: 1em;background-position: -83px -40px; }
 .ico-zone1 { width: 32px; height: 29px; background-position: 0 -123px; }
+.ico-trash { width: 19px; height: 19px; background-position: -38px -105px; }
+.ico-remove { width: 15px; height: 16px; background-position: -71px -105px; cursor:pointer }
 /* slider icons
 --------------------------------*/
 .ico-sprev, .ico-snext { width: 17px; height: 20px; }
