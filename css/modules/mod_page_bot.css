@@ -4,8 +4,8 @@
 
 /* slider
 --------------------------------*/
-.slider { position: relative; height: 123px; margin: 0 5px; }
-.slider-outer { padding-top: 3px; background: #fff; width: 100%; overflow: hidden; height: 95px; }
+.slider { position: relative; height: 119px; margin: 0 5px; }
+.slider-outer { padding-top: 3px; background: #fff; width: 100%; overflow: hidden; height: 90px; }
 .slider-inner { width: 3000px }
 .slider-list {margin: 0 10px }
 .slider-item { position: relative; float: left; width: 74px; height: 88px; margin: 0 4px; padding: 3px 10px 0; border-top: 3px solid #FFF; text-align: center; }

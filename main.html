@@ -13,17 +13,6 @@
 </head>
 <body>
 
-<div id="switcher">
-	<ul>
-		<li><a href="#d0">1</a></li>
-		<li><a href="#d1">2</a></li>
-		<li><a href="#d2">3</a></li>
-		<li><a href="#d3">4</a></li>
-		<li><a href="#d4">5</a></li>
-		<li><a href="#d5">6</a></li>
-	</ul>
-</div>
-
 <div id="page">
 
 	<div class="page-top">
@@ -32,20 +21,87 @@
 		</div>
 
 		<div class="nav-container">
-			<div class="nav-active-item">карта</div>
 			<ul class="nav-items">
-				<li class="active"><a href="#">Карта</a></li>
-				<li><a href="#">Устройства</a></li>
-				<li><a href="#">Зоны</a></li>
-				<li><a href="#">Группы</a></li>
+				<li class="active nav-active-item"><a href="#" idx="map">Карта</a></li>
+				<li><a href="#" idx="devices">Устройства</a></li>
+				<li><a href="#" idx="zones">Зоны</a></li>
+				<li><a href="#" idx="groups">Группы</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="page-mid">
 		<div class="page-mid-inner">
-
-			<div class="map-container map-container--wide g-hidden">
-				<img src="img/_map.jpg"  alt="" />
+			<div class="map-container map-container--wide">
+				<div class="w-popup w-popup-wide g-hidden">
+					<div class="w-popup-inner">
+						<div class="w-popup-close">
+							<i class="ico ico-close"></i>
+						</div>
+						<div class="w-popup-title grad-red">
+							<ul class="tabs">
+								<li class="active"><a href="#">Информация</a></li>
+								<li><a href="#">История</a></li>
+							</ul>
+						</div>
+						<div class="w-popup-content clearfix">
+							<div class="w-notify-charge">60%</div>
+							<div class="w-notify-user">
+								<div class="user-avatar">
+									<img src="img/_user_avatar2.jpg">
+								</div>
+								<div class="name">Елена Алексеева</div>
+							</div>
+							<div class="w-notify-state">
+								<div>Устройство 2</div>
+								<div class="status status-on">включено</div>
+								<div>скорость: 15 км/ч</div>
+							</div>
+							<div class="w-notify-last">
+								<div>Последняя передача данных:</div>
+								<div class="date">24 дня 5 часов назад</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<img src="img/_map.png"  alt="" />
+				
+				<div class="bottom-panel">
+					<div class="ico ico-sprev"></div>
+					<div class="ico ico-snext"></div>
+					<div class="bottom-scrollbar">
+						<div class="bottom-scrollbar-knob"></div>
+					</div>
+					<div class="bottom-panel-content">
+						<div class="w-notify-user">
+							<div class="user-avatar">
+								<img src="img/_user_slider_avatar.jpg">
+							</div>
+							<div class="ico ico-wcircle avatar-overlay">
+								<div class="ico ico-user"></div>
+							</div>
+							<div class="name">Светлана Петрова</div>
+						</div>
+						<div class="w-notify-user selected">
+							<div class="user-avatar">
+								<img src="img/_user_avatar2.jpg">
+							</div>
+							<div class="ico ico-wcircle avatar-overlay">
+								<div class="ico ico-auto"></div>
+							</div>
+							<div class="name">Устройство 2 на джипе</div>
+						</div>
+						<div class="w-notify-user">
+							<div class="user-avatar">
+								<img src="img/_user_avatar.jpg">
+							</div>
+							<div class="ico ico-wcircle avatar-overlay">
+								<div class="ico ico-present"></div>
+							</div>
+							<div class="name">Елена Алексеева</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<div id="zones" class="zones g-hidden">
@@ -181,19 +237,120 @@
 
 				<div class="zones-map">
 					<div class="zones-map-inner">
-						<img src="img/_map.jpg"  alt="" />
+						<img src="img/_map.png"  alt="" />
 					</div>
 				</div><!--//zones map-->
 
+				<!--div class="bottom-panel">
+					<div class="ico ico-sprev"></div>
+					<div class="ico ico-snext"></div>
+					<div class="bottom-panel-content">
+						
+					</div>
+				</div-->
 			</div><!--//zones-->
 
-			<div class="sidebar-nav-outer g-hidden">
-				<ul class="sidebar-nav">
-					<li class="grad-red"><a href="#">Видимые устройства</a></li>
-					<li class="grad-red active"><a href="#">Мои устройства</a></li>
-					<li class="grad-red"><a href="#">Устройства друзей</a></li>
-				</ul>
+			<div id="groups" class="groups g-hidden">
+				<!-- блок отоброжения групп -->
+				<div class="users-view overflowable-wrapper">
+					<div class="overflowable-scrollbar"><div class="overflowable-knob"></div></div>
+					<div class="overflowable-content">
+						<ul class="users-list clearfix">
+							<li>
+								<a class="user-add-pseudoico" href="#">+</a>
+								<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+								<span class="user-fn">Елена Алексеева</span>
+							</li>
+							<li>
+								<a class="user-add-pseudoico" href="#">+</a>
+								<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+								<span class="user-fn">Ольга Алексеева</span>
+							</li>
+							<li>
+								<a class="user-add-pseudoico" href="#">+</a>
+								<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+								<span class="user-fn">Иван Алексей</span>
+							</li>
+							<li>
+								<a class="user-add-pseudoico" href="#">+</a>
+								<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+								<span class="user-fn">Аэишлат Алексеев</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- блок редактирования групп -->
+				<div class="groups-edit-container">
+					<div class="btn ico-add btn-add-group"><button><i class="ico"></i>Добавить группу</button></div>
+					<div class="groups-edit-grid clearfix  overflowable-wrapper">
+						<div class="overflowable-scrollbar"><div class="overflowable-knob"></div></div>
+						<div class="overflowable-content">
+							<ul class="groups-edit clearfix">
+								<li>
+									<div class="group-details">
+										<span class="group-title">Группа 1</span> <i class="ico ico-edit edit-group-title"></i>
+										<span class="group-users-count">(3 друга)</span>
+									</div>
+									<div class="group-remove">
+										<i class="ico ico-trash"></i> <a href="#">Удалить</a>
+									</div>
+									<ul class="group-users-list">
+										<li><i class="ico ico-remove"></i> Друг 11</li>
+										<li><i class="ico ico-remove"></i> Друг 22</li>
+										<li><i class="ico ico-remove"></i> Друг 33</li>
+									</ul>
+								</li>
+								<!--group-->
+								<li class="extended">
+									<div class="group-details">
+										<span class="group-title">Группа 1</span> <i class="ico ico-edit edit-group-title"></i>
+										<span class="group-users-count">(3 друга)</span>
+									</div>
+									<div class="group-remove">
+										<i class="ico ico-trash"></i> <a href="#">Удалить</a>
+									</div>
+									<ul class="group-users-list">
+										<li><i class="ico ico-remove"></i> Друг 1</li>
+										<li><i class="ico ico-remove"></i> Друг 2</li>
+										<li><i class="ico ico-remove"></i> Друг 3</li>
+									</ul>
+								</li>
+								<!--group-->
+								<li>
+									<div class="group-details">
+										<span class="group-title"><input type="text" value="Группа 3" /></span> <i class="ico ico-save edit-group-title"></i>
+										<span class="group-users-count">(3 друга)</span>
+									</div>
+									<div class="group-remove">
+										<i class="ico ico-trash"></i> <a href="#">Удалить</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 			</div>
+
+			<div id="devices" class="g-hidden">
+			
+				<div class="sidebar-nav-outer">
+					<ul class="sidebar-nav">
+						<li class="grad-red active" idx="3"><a href="#">Видимые устройства</a></li>
+						<li class="grad-red" idx="5"><a href="#">Мои устройства</a></li>
+						<li class="grad-red" idx="4"><a href="#">Устройства друзей</a></li>
+					</ul>
+				</div>
+
+			<!--div id="switcher">
+				<ul>
+					<li><a href="#d0">1</a></li>
+					<li><a href="#d1">2</a></li>
+					<li><a href="#d2">3</a></li>
+					<li><a href="#d3">4</a></li>
+					<li><a href="#d4">5</a></li>
+					<li><a href="#d5">6</a></li>
+				</ul>
+			</div-->
 
 			<div id="d0" class="content-short-outer g-hidden device-0">
 				<div class="heading clearfix">
@@ -278,7 +435,7 @@
 				</p>
 			</div>
 
-			<div id="d3" class="content-short-outer g-hidden device-3">
+			<div id="d3" class="content-short-outer device-3">
 				<table class="table-data" cellspacing="0">
 					<thead>
 						<tr class="grad-grey">
@@ -500,83 +657,8 @@
 				</table>
 			</div>
 
-			<div id="groups" class="groups">
-				<!-- блок отоброжения групп -->
-				<div class="users-view">
-					<ul class="users-list clearfix">
-						<li>
-							<a class="user-add-pseudoico" href="#">+</a>
-							<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
-							<span class="user-fn">Елена Алексеева</span>
-						</li>
-						<li>
-							<a class="user-add-pseudoico" href="#">+</a>
-							<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
-							<span class="user-fn">Ольга Алексеева</span>
-						</li>
-						<li>
-							<a class="user-add-pseudoico" href="#">+</a>
-							<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
-							<span class="user-fn">Иван Алексей</span>
-						</li>
-						<li>
-							<a class="user-add-pseudoico" href="#">+</a>
-							<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
-							<span class="user-fn">Аэишлат Алексеев</span>
-						</li>
-					</ul>
-				</div>
-				<!-- блок редактирования групп -->
-				<div class="groups-edit-container">
-					<div class="btn ico-add btn-add-group"><button><i class="ico"></i>Добавить группу</button></div>
-					<div class="groups-edit-grid clearfix">
-						<ul class="groups-edit clearfix">
-							<li>
-								<div class="group-details">
-									<span class="group-title">Группа 1</span> <i class="ico ico-edit edit-group-title"></i>
-									<span class="group-users-count">(3 друга)</span>
-								</div>
-								<div class="group-remove">
-									<i class="ico ico-trash"></i> <a href="#">Удалить</a>
-								</div>
-								<ul class="group-users-list">
-									<li><i class="ico ico-remove"></i> Друг 11</li>
-									<li><i class="ico ico-remove"></i> Друг 22</li>
-									<li><i class="ico ico-remove"></i> Друг 33</li>
-								</ul>
-							</li>
-							<!--group-->
-							<li class="extended">
-								<div class="group-details">
-									<span class="group-title">Группа 1</span> <i class="ico ico-edit edit-group-title"></i>
-									<span class="group-users-count">(3 друга)</span>
-								</div>
-								<div class="group-remove">
-									<i class="ico ico-trash"></i> <a href="#">Удалить</a>
-								</div>
-								<ul class="group-users-list">
-									<li><i class="ico ico-remove"></i> Друг 1</li>
-									<li><i class="ico ico-remove"></i> Друг 2</li>
-									<li><i class="ico ico-remove"></i> Друг 3</li>
-								</ul>
-							</li>
-							<!--group-->
-							<li>
-								<div class="group-details">
-									<span class="group-title"><input type="text" value="Группа 3" /></span> <i class="ico ico-save edit-group-title"></i>
-									<span class="group-users-count">(3 друга)</span>
-								</div>
-								<div class="group-remove">
-									<i class="ico ico-trash"></i> <a href="#">Удалить</a>
-								</div>
-							</li>
-						</ul>
 					</div>
-				</div>
 			</div>
-
-
-		</div>
 	</div>
 	<div class="page-bot">
 		<!--additional blocks-->
@@ -706,20 +788,79 @@
 		</div>
 	</div>
 
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript">
-	var $ = function(s) {return document.querySelector(s)};
+	//var $ = function(s) {return document.querySelector(s)};
 	var setHeight = function() {
 		var mid = $('.page-mid'),
 				top = $('.page-top'),
 				bot = $('.page-bot');
 
-		mid.style.height = document.body.clientHeight - (top.clientHeight + bot.clientHeight) + 'px';
+		mid.css('height', document.body.clientHeight - (top.get(0).clientHeight + bot.get(0).clientHeight) + 'px');
 	};
 
 	setHeight();
-	window.onresize = function() {
-		setHeight();
-	};
+	window.onresize = function() { setHeight(); };
+	
+// top menu switcher
+(function() {
+	var idx = 'map';
+	$(".nav-items a").click(function(event){
+		var $this = $(this);
+		var newIdx = $this.attr('idx');
+		if (newIdx == idx) return true;
+		var $parent = $(this.parentNode.parentNode);
+		$parent.find('.active').removeClass('active').removeClass('nav-active-item');
+		$this.parent().addClass('active').addClass('nav-active-item');
+		switch(idx) {
+			case 'map': $('.map-container').addClass('g-hidden'); break;
+			case 'devices': $('#devices').addClass('g-hidden'); break;
+			case 'zones': $('#zones, .slider--zones').addClass('g-hidden'); break;
+			case 'groups': $('#groups').addClass('g-hidden'); break;
+		}
+		switch(newIdx) {
+			case 'map': $('.map-container').removeClass('g-hidden'); $('.page-mid').css('height', "515px"); break;
+			case 'devices': $('#devices').removeClass('g-hidden'); $('.page-mid').css('height', "515px"); break;
+			case 'zones': $('#zones, .slider--zones').removeClass('g-hidden'); $('.page-mid').css('height', "418px"); break;
+			case 'groups': $('#groups').removeClass('g-hidden'); $('.page-mid').css('height', "515px"); break;
+		}
+		idx = newIdx;
+	});
+})();
+
+// vertical custom scrolls
+$('.overflowable-content').live('resize', function(){
+    var h = this.offsetHeight;
+    var H = this.parentNode.offsetHeight;
+    var $parent = $(this.parentNode);
+    var knob = $parent.find('.overflowable-knob');
+    if (h < H) {
+        knob.css({
+            height: "100%",
+            top: 0
+        });
+    } else {
+        knob.css({
+            height: 100*H/h + "%",
+            top: this.style.top || 0
+        });        
+    }
+});
+
+// device switching 
+(function() {
+	var idx = '3';
+	$('#devices .sidebar-nav .grad-red').click(function(){
+		var $this = $(this);
+		var newIdx = $this.attr('idx');
+		if (newIdx == idx) return true;
+		$this.parent().find('.active').removeClass('active');
+		$this.addClass('active');
+		$('#d'+idx).addClass('g-hidden'); // hide old
+		$('#d'+newIdx).removeClass('g-hidden'); // show new
+		idx = newIdx;
+	});
+})();
 </script>
 
 </body>

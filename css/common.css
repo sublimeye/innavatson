@@ -59,9 +59,10 @@ body {min-height: 600px}
 
 #switcher {
 	position: fixed;
-	right: 0;
-	top: 0;
+	left: 20px;
+	top: 60px;
 	z-index: 1000;
+	background: silver;
 }
 
 /* SWITCHER
@@ -115,3 +116,87 @@ a:hover{color:#5A5A5A}
 /* GLOBAL
 --------------------------------*/
 li {list-style: none}
+
+.overflowable-wrapper {
+	position: relative;
+}
+.overflowable-content {
+	margin-right: 20px;
+}
+.overflowable-scrollbar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+	width: 20px;
+	background: url('../img/scrollbar.png') repeat-y;
+}
+.overflowable-knob {
+	background-color: #fafafa;
+	background: -moz-linear-gradient(left, #f5f5f5, #fff, #f5f5f5);
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+	position: relative;
+	left: 5px;
+	top: 25%;
+	width: 9px;
+	height: 50%;
+	cursor: pointer;
+}
+
+.bottom-panel {
+	position: relative;
+	padding: 0 10px;
+}
+.bottom-panel .w-notify-user {
+	width: 94px;
+	margin: 0;
+	position: relative;
+}
+.bottom-panel .w-notify-user .name { font-size: 10px; line-height: 10px; padding: 0 10px 0 21px; }
+.bottom-panel .w-notify-user .user-avatar { margin: 10px 19px 5px; }
+.bottom-panel .w-notify-user:hover,
+.bottom-panel .w-notify-user.selected { color: #b92525; }
+.bottom-panel .w-notify-user:hover .user-avatar img { border-color: #c33130; }
+.bottom-panel .selected {
+	background: url('../img/map_bg_selected.png') repeat-x;
+}
+.avatar-overlay {
+	left: 55px;
+    position: absolute;
+    top: 30px;
+}
+.avatar-overlay .ico { margin: 4px 0 0 8px; }
+.avatar-overlay .ico-auto { margin: 5px 0 0 6px; }
+
+.bottom-panel .ico-sprev,
+.bottom-panel .ico-snext {
+	position: absolute;	
+	top: 40px;
+	cursor: pointer;
+}
+.bottom-panel .ico-sprev { left: -4px; }
+.bottom-panel .ico-snext { right: -4px; }
+
+.bottom-panel-content { width: 100%; overflow: hidden; margin-bottom: -89px; }
+
+.bottom-scrollbar {
+	position: absolute;
+	left: -2px;
+	right: -2px;
+	top: 106px;
+	height: 6px;
+	border: 1px solid #bb3030;
+	border-radius: 3px;
+	background: url('../img/bg-user-scrollbar.png') center repeat-x;
+}
+.bottom-scrollbar-knob {
+	position: absolute;
+	left: 40%;
+	width: 40%;
+	height: 9px;
+	top: -2px;
+	background: url('../img/bg-user-scrollbar-knob.png') center repeat-x;
+	border-radius: 4px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+}

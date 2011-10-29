@@ -7,12 +7,14 @@
 .sidebar-nav a{display:inline-block;padding:6px 15px;color:#fff;text-decoration:none}
 .sidebar-nav li a:hover{color:#FFF991}
 .sidebar-nav .active a:hover{color:inherit;cursor:default}
-.sidebar-nav .active{background:#fff;border:1px solid #BABABA;border-right:0;filter: none}
-.sidebar-nav .active a{color:#5a6e82}
+.sidebar-nav .active{background:#fff;border:0px solid #BABABA;border-left-width:1px;filter: none}
+.sidebar-nav li.active:first-child { border-top-width: 1px; }
+.sidebar-nav li.active:last-child { border-bottom-width: 1px; }
+.sidebar-nav .active a{color:#626d80}
 
 /* content short
 --------------------------------*/
-.content-short-outer{margin-left:174px;padding:6px 9px 0;height:100%;overflow:auto;box-sizing:border-box;border:1px solid #BABABA}
+.content-short-outer {margin-left:174px;padding:6px 9px 0;height:100%;overflow:auto;box-sizing:border-box;-moz-box-sizing:border-box;border:1px solid #BABABA}
 .content-short-outer p{font-size:12px;font-size:1.2rem}
 .heading{text-align:center;padding:15px 0}
 .heading h2{text-align:center;display:inline-block;line-height:35px;line-height:3.5rem}
