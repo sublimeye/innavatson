@@ -41,6 +41,7 @@ body {min-height: 600px}
 
 .g-hidden { display: none; }
 .g-center {text-align: center}
+.g-ns, .g-ns_children { -webkit-user-select:none; -moz-user-select:-moz-none; -o-user-select:none; user-select:none; }
 
 .fl-left {float: left}
 .fl-right {float:right}
@@ -116,6 +117,9 @@ a:hover{color:#5A5A5A}
 /* GLOBAL
 --------------------------------*/
 li {list-style: none}
+
+/* additional
+--------------------------------*/
 
 .overflowable-wrapper {
 	position: relative;
