@@ -3,12 +3,15 @@
  */
 
 var IV = {
+	Obs: $({}),
+
 	init: function() {
 		/* calculate and set height to middle {page-mid} container */
 		this.calcLayout();
 		this.sectionSwitcher();
-		this.bottomSliders();
+//		this.bottomSliders();
 
+		this.sliders.init();
 		/* modules */
 		this.devices.init();
 
@@ -18,6 +21,7 @@ var IV = {
 
 	events: function() {
 		window.onresize = this.calcLayout;
+		window.onresize = this.sliders.init;
 	},
 
 	calcLayout: function() {
@@ -58,55 +62,71 @@ var IV = {
 		});
 	},
 
-	/**
-	 * sliders with custom scroll + controls
-	 */
-	bottomSliders: function() {
-		$( '.slider' ).each( function (idx , elt) {
-			var $elt = $( elt );
-			(function () {
-				var outerWidth = $( '.page-bot' ).width() - 10 - 30; // 2 paddings + 2 margins
-				var innerWidth = 0;
-				$elt.find( ".slider-item" ).each( function (idx , si) {
-					innerWidth += $( si ).outerWidth() + 10; // padding
-				} );
-				if ( innerWidth < outerWidth )
-					innerWidth = outerWidth;
+	sliders: {
+		classSlider: '.slider',
+		classSliderList: '.slider-list',
+		classSliderInner: '.slider-inner',
+		classItemNext: '.slider-next',
+		classItemPrev: '.slider-prev',
+		classSliderHandler: '.slider-scroll-handler',
+		classPageBottom: '.page-bot',
 
-				var pos = 0;
-				var $container = $elt.find( '.slider-inner' );
-				$container.css( 'position' , 'relative' );
-				// arrows
-				$elt.find( '.slider-prev' ).click( function () {
+		init: function() {
+			_s = this;
+
+			$(_s.classSlider).each(function(idx, elt) {
+				var $elt = $(elt),
+						$container = $elt.find(_s.classSliderInner),
+						outerWidth = $(_s.classPageBottom).outerWidth(true),
+						innerWidth = $(_s.classSliderList).outerWidth(true),
+						scrollWidth = outerWidth - 24,
+						kfc = (innerWidth - outerWidth) / (outerWidth - scrollWidth),
+						$knob = $elt.find(_s.classSliderHandler),
+						pos = 0;
+
+				innerWidth = (innerWidth < outerWidth) ? outerWidth : innerWidth;
+
+
+				/* TODO: temp static value/bug fixing*/
+//				kfc	= 1.6;
+				/* previous slider items */
+				$elt.find(_s.classItemPrev).bind('click.prev_items', function() {
 					pos -= innerWidth;
-					if ( pos < 0 ) pos = 0;
+					if ( pos < 0 ) { pos = 0 }
 					$knob.animate( {left:pos / kfc + 'px' } );
 					$container.animate( {left:-pos + 'px'} );
-				} );
-				$elt.find( '.slider-next' ).click( function () {
+				});
+
+				/* next slider items */
+				$elt.find(_s.classItemNext).bind('click.next_items', function() {
+					var widthDelta = innerWidth - outerWidth;
 					pos += innerWidth;
-					if ( pos > innerWidth - outerWidth ) {
-						pos = innerWidth - outerWidth;
+					if ( pos > widthDelta ) {
+						pos = widthDelta;
 					}
 					$knob.animate( {left:pos / kfc + 'px' } );
 					$container.animate( {left:-pos + 'px'} );
-				} );
-				// scroller
-				var x, spos, dragging = false;
-				var scrollWidth = outerWidth * outerWidth / innerWidth;
-				var $knob = $elt.find( ".slider-scroll-handler" );
-				$knob.css( {
-					width:scrollWidth + 'px' ,
-					left:pos
-				} ).mousedown( function (event) {
+				});
+
+				/* scroller dragable */
+				var x,
+						spos,
+						dragging = false;
+
+					$knob
+						.css({
+							width:scrollWidth + 'px' ,
+							left:pos
+						})
+						.mousedown( function (event) {
 							x = event.pageX;
 							spos = pos;
 							dragging = true;
 						} );
-				var kfc = (innerWidth - outerWidth) / (outerWidth - scrollWidth);
-				$( document ).mousemove(
-						function (event) {
-							if ( !dragging ) return true;
+
+					$(document)
+						.mousemove(function (event) {
+							if ( !dragging ) { return true }
 							pos = spos + (event.pageX - x) * kfc;
 							if ( pos < 0 ) pos = 0;
 							if ( pos > innerWidth - outerWidth ) {
@@ -114,25 +134,28 @@ var IV = {
 							}
 							$knob.css( 'left' , pos / kfc );
 							$container.css( 'left' , -pos + 'px' );
-						} ).mouseup( function (event) {
+						})
+						.mouseup(function () {
 							dragging = false;
-						} );
-				$elt.bind( 'mousewheel' , function (event , delta) {
-					var dir = delta > 0 ? -1 : +1;
-//					console.log(event);
-					pos += 30 * dir;
+						});
 
-					if ( pos < 0 ) pos = 0;
-					if ( pos > innerWidth - outerWidth ) {
-						pos = innerWidth - outerWidth;
-					}
-					$knob.css( 'left' , pos / kfc );
-					$container.css( 'left' , -pos + 'px' );
-				} );
-			})();
-		});
+					$elt.mousewheel(function(e, delta) {
+						var dir = delta > 0 ? -1 : +1;
+						pos += 30 * dir;
+
+						if ( pos < 0 ) pos = 0;
+						if ( pos > innerWidth - outerWidth ) {
+							pos = innerWidth - outerWidth;
+						}
+						$knob.css( 'left' , pos / kfc );
+						$container.css( 'left' , -pos + 'px' );
+					}, null, null);
+
+			});
+
+		}
+
 	}
-
 };
 
 $(document).ready(function() {
