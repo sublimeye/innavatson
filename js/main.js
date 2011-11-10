@@ -9,7 +9,7 @@ var IV = {
 		this.sectionSwitcher();
 		this.bottomSliders();
 
-		/* init modules */
+		/* modules */
 		this.devices.init();
 
 		/* attach events */
@@ -28,6 +28,9 @@ var IV = {
 		mid.css('height', document.body.clientHeight - (top.get(0).clientHeight + bot.get(0).clientHeight) + 'px');
 	},
 
+	/**
+	 * Top sections switcher
+	 */
 	sectionSwitcher: function() {
 		var idx = 'map',
 				_app = this;
@@ -55,6 +58,9 @@ var IV = {
 		});
 	},
 
+	/**
+	 * sliders with custom scroll + controls
+	 */
 	bottomSliders: function() {
 		$( '.slider' ).each( function (idx , elt) {
 			var $elt = $( elt );
@@ -113,8 +119,8 @@ var IV = {
 						} );
 				$elt.bind( 'mousewheel' , function (event , delta) {
 					var dir = delta > 0 ? -1 : +1;
-
-					pos -= 30 * delta;
+//					console.log(event);
+					pos += 30 * dir;
 
 					if ( pos < 0 ) pos = 0;
 					if ( pos > innerWidth - outerWidth ) {
