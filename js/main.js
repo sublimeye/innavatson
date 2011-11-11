@@ -3,8 +3,6 @@
  */
 
 var IV = {
-	Obs: $({}),
-
 	init: function() {
 		/* calculate and set height to middle {page-mid} container */
 		this.calcLayout();
@@ -21,7 +19,6 @@ var IV = {
 
 	events: function() {
 		window.onresize = this.calcLayout;
-		window.onresize = this.sliders.init;
 	},
 
 	calcLayout: function() {
@@ -69,7 +66,7 @@ var IV = {
 		classItemNext: '.slider-next',
 		classItemPrev: '.slider-prev',
 		classSliderHandler: '.slider-scroll-handler',
-		classPageBottom: '.page-bot',
+		classSliderOuter: '.slider-outer',
 
 		init: function() {
 			_s = this;
@@ -77,21 +74,34 @@ var IV = {
 			$(_s.classSlider).each(function(idx, elt) {
 				var $elt = $(elt),
 						$container = $elt.find(_s.classSliderInner),
-						outerWidth = $(_s.classPageBottom).outerWidth(true),
-						innerWidth = $(_s.classSliderList).outerWidth(true),
-						scrollWidth = outerWidth - 24,
-						kfc = (innerWidth - outerWidth) / (outerWidth - scrollWidth),
-						$knob = $elt.find(_s.classSliderHandler),
+						innerWidth,
+						outerWidth = $(_s.classSliderOuter).outerWidth();
+
+				if ($elt.hasClass('g-hidden')) {
+					$elt.removeClass('g-hidden');
+					innerWidth = $elt.find(_s.classSliderList).width();
+					$elt.addClass('g-hidden');
+				} else {
+					innerWidth = $elt.find(_s.classSliderList).width();
+				}
+
+					innerWidth = (innerWidth < outerWidth) ? outerWidth : innerWidth;
+
+				var $knob = $elt.find(_s.classSliderHandler),
+						scrollWidth = outerWidth * outerWidth / innerWidth - 20,
+						kfc,
 						pos = 0;
 
-				innerWidth = (innerWidth < outerWidth) ? outerWidth : innerWidth;
+				if (innerWidth - outerWidth == 0) {
+					kfc = 1;
+				} else {
+					kfc = (innerWidth - outerWidth) / (outerWidth - scrollWidth - 20);
+					// TODO: find reason for 20 delta
+				}
 
-
-				/* TODO: temp static value/bug fixing*/
-//				kfc	= 1.6;
 				/* previous slider items */
 				$elt.find(_s.classItemPrev).bind('click.prev_items', function() {
-					pos -= innerWidth;
+					pos -= outerWidth;
 					if ( pos < 0 ) { pos = 0 }
 					$knob.animate( {left:pos / kfc + 'px' } );
 					$container.animate( {left:-pos + 'px'} );
@@ -100,7 +110,7 @@ var IV = {
 				/* next slider items */
 				$elt.find(_s.classItemNext).bind('click.next_items', function() {
 					var widthDelta = innerWidth - outerWidth;
-					pos += innerWidth;
+					pos += outerWidth;
 					if ( pos > widthDelta ) {
 						pos = widthDelta;
 					}
