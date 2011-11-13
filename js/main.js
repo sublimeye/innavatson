@@ -67,6 +67,7 @@ var IV = {
 		classItemPrev: '.slider-prev',
 		classSliderHandler: '.slider-scroll-handler',
 		classSliderOuter: '.slider-outer',
+		data: [],
 
 		init: function() {
 			_s = this;
@@ -76,6 +77,7 @@ var IV = {
 						$container = $elt.find(_s.classSliderInner),
 						innerWidth,
 						outerWidth = $(_s.classSliderOuter).outerWidth();
+
 
 				if ($elt.hasClass('g-hidden')) {
 					$elt.removeClass('g-hidden');
@@ -99,12 +101,22 @@ var IV = {
 					// TODO: find reason for 20 delta
 				}
 
+				_s.data.push(
+						{
+							"id": idx,
+							"el": elt,
+							"kfc": kfc,
+							"innerWidth": innerWidth,
+							"outerWidth": outerWidth,
+							"scrollWidth": scrollWidth
+						});
+
 				/* previous slider items */
 				$elt.find(_s.classItemPrev).bind('click.prev_items', function() {
 					pos -= outerWidth;
 					if ( pos < 0 ) { pos = 0 }
-					$knob.animate( {left:pos / kfc + 'px' } );
-					$container.animate( {left:-pos + 'px'} );
+					$knob.stop(true, true).animate( {left:pos / kfc + 'px' } );
+					$container.stop(true, true).animate( {left:-pos + 'px'} );
 				});
 
 				/* next slider items */
@@ -114,8 +126,12 @@ var IV = {
 					if ( pos > widthDelta ) {
 						pos = widthDelta;
 					}
-					$knob.animate( {left:pos / kfc + 'px' } );
-					$container.animate( {left:-pos + 'px'} );
+					$knob.stop(true, true).animate( {left:pos / kfc + 'px' } );
+					$container.stop(true, true).animate( {left:-pos + 'px'} );
+				});
+
+				$(window).resize(function() {
+					_s.reinit();
 				});
 
 				/* scroller dragable */
@@ -163,6 +179,11 @@ var IV = {
 
 			});
 
+		},
+
+		reinit: function() {
+			for (var i=0,len = this.data.length; i<len; i++) {
+			}
 		}
 
 	}
