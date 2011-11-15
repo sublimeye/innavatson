@@ -10,6 +10,7 @@ var IV = {
 //		this.bottomSliders();
 
 		this.sliders.init();
+		$('.slider').IVSliders();
 		/* modules */
 		this.devices.init();
 
@@ -67,7 +68,6 @@ var IV = {
 		classItemPrev: '.slider-prev',
 		classSliderHandler: '.slider-scroll-handler',
 		classSliderOuter: '.slider-outer',
-		data: [],
 
 		init: function() {
 			_s = this;
@@ -101,16 +101,6 @@ var IV = {
 					// TODO: find reason for 20 delta
 				}
 
-				_s.data.push(
-						{
-							"id": idx,
-							"el": elt,
-							"kfc": kfc,
-							"innerWidth": innerWidth,
-							"outerWidth": outerWidth,
-							"scrollWidth": scrollWidth
-						});
-
 				/* previous slider items */
 				$elt.find(_s.classItemPrev).bind('click.prev_items', function() {
 					pos -= outerWidth;
@@ -131,7 +121,18 @@ var IV = {
 				});
 
 				$(window).resize(function() {
-					_s.reinit();
+					outerWidth = $(_s.classSliderOuter).outerWidth();
+					innerWidth = $elt.find(_s.classSliderList).width();
+					innerWidth = (innerWidth < outerWidth) ? outerWidth : innerWidth;
+					scrollWidth = outerWidth * outerWidth / innerWidth - 20;
+
+					if (innerWidth - outerWidth == 0) {
+						kfc = 1;
+					} else {
+						kfc = (innerWidth - outerWidth) / (outerWidth - scrollWidth - 20);
+						// TODO: find reason for 20 delta
+					}
+
 				});
 
 				/* scroller dragable */
@@ -166,6 +167,7 @@ var IV = {
 						});
 
 					$elt.mousewheel(function(e, delta) {
+
 						var dir = delta > 0 ? -1 : +1;
 						pos += 30 * dir;
 
@@ -179,13 +181,34 @@ var IV = {
 
 			});
 
-		},
-
-		reinit: function() {
-			for (var i=0,len = this.data.length; i<len; i++) {
-			}
 		}
 
+/*
+		reinit: function() {
+
+			$.each(this.data, function(i, obj) {
+				var $el = $(obj.el),
+						visible = $el.is(':visible'),
+						innerWidth, outerWidth, scrollWidth;
+
+				if (visible) {
+
+					obj.outerWidth = outerWidth = $(this.classSliderOuter).outerWidth();
+					innerWidth = $el.find(this.classSliderList).width();
+					innerWidth = (innerWidth < outerWidth) ? outerWidth : innerWidth;
+					obj.innerWidth = innerWidth;
+					obj.scrollWidth = scrollWidth = outerWidth * outerWidth / innerWidth - 20;
+					if (innerWidth - outerWidth == 0) {
+						obj.kfc = 1;
+					} else {
+						obj.kfc = (innerWidth - outerWidth) / (outerWidth - scrollWidth - 20);
+					}
+				}
+			}.bind(this));
+
+		}
+
+*/
 	}
 };
 
