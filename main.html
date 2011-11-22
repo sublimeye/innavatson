@@ -21,7 +21,7 @@
 		</div>
 
 		<div class="nav-container">
-			<ul class="nav-items">
+			<ul class="nav-items g-ns_children">
 				<li class="active nav-active-item"><a href="#" idx="map">Карта</a></li>
 				<li><a href="#" idx="devices">Устройства</a></li>
 				<li><a href="#" idx="zones">Зоны</a></li>
@@ -210,80 +210,271 @@
 
 			<div id="groups" class="groups g-hidden section">
 				<!-- блок отоброжения групп -->
-				<div class="users-view overflowable-wrapper">
-					<div class="overflowable-scrollbar"><div class="overflowable-knob"></div></div>
-					<div class="overflowable-content">
-						<ul class="users-list clearfix">
-							<li>
-								<a class="user-add-pseudoico" href="#">+</a>
-								<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
-								<span class="user-fn">Елена Алексеева</span>
-							</li>
-							<li>
-								<a class="user-add-pseudoico" href="#">+</a>
-								<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
-								<span class="user-fn">Ольга Алексеева</span>
-							</li>
-							<li>
-								<a class="user-add-pseudoico" href="#">+</a>
-								<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
-								<span class="user-fn">Иван Алексей</span>
-							</li>
-							<li>
-								<a class="user-add-pseudoico" href="#">+</a>
-								<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
-								<span class="user-fn">Аэишлат Алексеев</span>
-							</li>
-						</ul>
+				<div class="users-view j-scrollable">
+					<!--<div class="overflowable-scrollbar"><div class="overflowable-knob"></div></div>-->
+					<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+
+					<div class="viewport">
+						<div class="overview">
+							<ul class="users-list clearfix">
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Елена Алексеева</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Ольга Алексеева</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Иван Алексей</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+								<li>
+									<a class="user-add-pseudoico" href="#">+</a>
+									<span class="user-avatar"><img src="img/_user_avatar.jpg" alt="Фото - Елена Алексеева" /></span>
+									<span class="user-fn">Аэишлат Алексеев</span>
+								</li>
+
+							</ul>
+						</div>
 					</div>
 				</div>
 				<!-- блок редактирования групп -->
 				<div class="groups-edit-container">
 					<div class="btn ico-add btn-add-group"><button><i class="ico"></i>Добавить группу</button></div>
-					<div class="groups-edit-grid clearfix  overflowable-wrapper">
-						<div class="overflowable-scrollbar"><div class="overflowable-knob"></div></div>
-						<div class="overflowable-content">
-							<ul class="groups-edit clearfix">
-								<li>
-									<div class="group-details">
-										<span class="group-title">Группа 1</span> <i class="ico ico-edit edit-group-title"></i>
-										<span class="group-users-count">(3 друга)</span>
-									</div>
-									<div class="group-remove">
-										<i class="ico ico-trash"></i> <a href="#">Удалить</a>
-									</div>
-									<ul class="group-users-list">
-										<li><i class="ico ico-remove"></i> Друг 11</li>
-										<li><i class="ico ico-remove"></i> Друг 22</li>
-										<li><i class="ico ico-remove"></i> Друг 33</li>
-									</ul>
-								</li>
-								<!--group-->
-								<li class="extended">
-									<div class="group-details">
-										<span class="group-title">Группа 1</span> <i class="ico ico-edit edit-group-title"></i>
-										<span class="group-users-count">(3 друга)</span>
-									</div>
-									<div class="group-remove">
-										<i class="ico ico-trash"></i> <a href="#">Удалить</a>
-									</div>
-									<ul class="group-users-list">
-										<li><i class="ico ico-remove"></i> Друг 1</li>
-										<li><i class="ico ico-remove"></i> Друг 2</li>
-										<li><i class="ico ico-remove"></i> Друг 3</li>
-									</ul>
-								</li>
-								<!--group-->
-								<li>
-									<div class="group-details">
-										<span class="group-title"><input type="text" value="Группа 3" /></span> <i class="ico ico-save edit-group-title"></i>
-										<span class="group-users-count">(3 друга)</span>
-									</div>
-									<div class="group-remove">
-										<i class="ico ico-trash"></i> <a href="#">Удалить</a>
-									</div>
-								</li>
-							</ul>
+					<div class="groups-edit-grid clearfix j-scrollable">
+						<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+						<div class="viewport">
+							<div class="overview">
+								<ul class="groups-edit clearfix">
+									<li>
+										<div class="group-details">
+											<span class="group-title">Группа 1</span> <i class="ico ico-edit edit-group-title"></i>
+											<span class="group-users-count">(3 друга)</span>
+										</div>
+										<div class="group-remove">
+											<i class="ico ico-trash"></i> <a href="#">Удалить</a>
+										</div>
+										<ul class="group-users-list">
+											<li><i class="ico ico-remove"></i> Друг 11</li>
+											<li><i class="ico ico-remove"></i> Друг 22</li>
+											<li><i class="ico ico-remove"></i> Друг 33</li>
+										</ul>
+									</li>
+									<!--group-->
+									<li class="extended">
+										<div class="group-details">
+											<span class="group-title">Группа 1</span> <i class="ico ico-edit edit-group-title"></i>
+											<span class="group-users-count">(3 друга)</span>
+										</div>
+										<div class="group-remove">
+											<i class="ico ico-trash"></i> <a href="#">Удалить</a>
+										</div>
+										<ul class="group-users-list">
+											<li><i class="ico ico-remove"></i> Друг 1</li>
+											<li><i class="ico ico-remove"></i> Друг 2</li>
+											<li><i class="ico ico-remove"></i> Друг 3</li>
+										</ul>
+									</li>
+									<li class="extended">
+										<div class="group-details">
+											<span class="group-title">Группа 1</span> <i class="ico ico-edit edit-group-title"></i>
+											<span class="group-users-count">(3 друга)</span>
+										</div>
+										<div class="group-remove">
+											<i class="ico ico-trash"></i> <a href="#">Удалить</a>
+										</div>
+										<ul class="group-users-list">
+											<li><i class="ico ico-remove"></i> Друг 1</li>
+											<li><i class="ico ico-remove"></i> Друг 2</li>
+											<li><i class="ico ico-remove"></i> Друг 3</li>
+										</ul>
+									</li>
+									<li class="extended">
+										<div class="group-details">
+											<span class="group-title">Группа 1</span> <i class="ico ico-edit edit-group-title"></i>
+											<span class="group-users-count">(3 друга)</span>
+										</div>
+										<div class="group-remove">
+											<i class="ico ico-trash"></i> <a href="#">Удалить</a>
+										</div>
+										<ul class="group-users-list">
+											<li><i class="ico ico-remove"></i> Друг 1</li>
+											<li><i class="ico ico-remove"></i> Друг 2</li>
+											<li><i class="ico ico-remove"></i> Друг 3</li>
+										</ul>
+									</li>
+									<!--group-->
+									<li>
+										<div class="group-details">
+											<span class="group-title"><input type="text" value="Группа 3" /></span>
+											<i class="ico ico-save edit-group-title"></i> <span class="group-users-count">(3 друга)</span>
+										</div>
+										<div class="group-remove">
+											<i class="ico ico-trash"></i> <a href="#">Удалить</a>
+										</div>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -608,6 +799,57 @@
 		</div>
 	</div>
 	<div class="page-bot">
+	<div id="users-timeline" class="timeline g-hidden">
+		<div class="timeline-outer">
+			<div class="timeline-info">
+				<div class="close-timeline"><a href="#">Скрыть трек <i class="ico ico-close-timeline"></i></a></div>
+				<div class="fl-left">Устройство 2: История <a href="#" class="timeline-caution"><i class="ico ico-caution"></i></a>
+					<span class="timeline-borders-label">Границы периодов активности:</span>
+					<span class="busy-period"><i class="ico ico-prev-period"></i>20.09</span> &ndash; <span class="busy-period">30.09<i class="ico ico-next-period"></i></span></div>
+			</div>
+			<div class="timeline-grid clearfix">
+				<div class="timeline-date timeline-date-begin">
+					<a href="#"><span><b>31.09</b></span><br/><span>23:23</span><i class="ico ico-timeline-date"></i></a>
+				</div>
+				<div class="timeline-date timeline-date-end">
+					<a href="#"><span><b>26.10</b></span><br/><span>05:09</span><i class="ico ico-timeline-date"></i></a>
+				</div>
+				<div class="timeline-inner clearfix">
+					<!-- координаты прописаны в css только для наглядности, позиционирование происходит через CSS -->
+					<div class="timeline-outer-border">
+						<div class="ico timeline-handler" style="left: 73%"></div>
+
+						<!--  -->
+						<ul class="time-periods">
+							<li class="time-period time-period-disabled" style="width: 5%; left: 0"></li>
+							<li class="time-period time-period-enabled" style="width: 15%; left: 5%"></li>
+							<li class="time-period time-period-parking" style="width: 36%; left: 19.9%"></li>
+							<li class="time-period time-period-enabled" style="width: 21%; left: 55%"></li>
+							<li class="time-period time-period-parking" style="width: 10%; left: 75%"></li>
+							<li class="time-period time-period-disabled" style="width: 15%; left: 85%"></li>
+						</ul>
+
+						<ul class="time-labels">
+							<li class="time-label" style="left: 16.6%">12:00</li>
+							<li class="time-label" style="left: 33.2%">15:00</li>
+							<li class="time-label" style="left: 49.8%">18:00</li>
+							<li class="time-label" style="left: 66.4%">0:00</li>
+							<li class="time-label" style="left: 83%">3:00</li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+			<div class="timeline-legend-container">
+				<ul class="timeline-legend">
+					<li class="legend-item"><i class="legend-marker legend-marker-enabled"></i><span class="legend-text">устройство включено</span></li>
+					<li class="legend-item"><i class="legend-marker legend-marker-parking"></i><span class="legend-text">парковка</span></li>
+					<li class="legend-item"><i class="legend-marker legend-marker-disabled"></i><span class="legend-text">устройство выключено</span></li>
+				</ul>
+				<p class="timeline-history">Максимальный непрерывный период истории: <span class="timeline-htime">72 часа (3 суток)</span></p>
+			</div>
+		</div>
+	</div>
 		<!--additional blocks-->
 		<div id="users-slider" class="slider users-slider g-ns_children">
 			<div class="slider-outer">
@@ -617,14 +859,14 @@
 							<a class="slider-item-link" href="#">
 								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
 								<span class="slider-item-ico"><i class="ico ico-user"></i></span>
-								<span class="slider-item-title">Светлана Петрова</span>
+								<span class="slider-item-title">Добавить элемент</span>
 							</a>
 						</li>
 						<li class="slider-item">
 							<a class="slider-item-link" href="#">
 								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
 								<span class="slider-item-ico"><i class="ico ico-user"></i></span>
-								<span class="slider-item-title">Светлана Петрова</span>
+								<span class="slider-item-title">Удалить элемент</span>
 							</a>
 						</li>
 						<li class="slider-item">
@@ -718,104 +960,7 @@
 								<span class="slider-item-title">Светлана Петрова</span>
 							</a>
 						</li>
-						<li class="slider-item">
-							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
-								<span class="slider-item-ico"><i class="ico ico-user"></i></span>
-								<span class="slider-item-title">Светлана Петрова</span>
-							</a>
-						</li>
-						<li class="slider-item">
-							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
-								<span class="slider-item-ico"><i class="ico ico-user"></i></span>
-								<span class="slider-item-title">Светлана Петрова</span>
-							</a>
-						</li>
-						<li class="slider-item">
-							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
-								<span class="slider-item-ico"><i class="ico ico-user"></i></span>
-								<span class="slider-item-title">Светлана Петрова</span>
-							</a>
-						</li>
-						<li class="slider-item">
-							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
-								<span class="slider-item-ico"><i class="ico ico-user"></i></span>
-								<span class="slider-item-title">Светлана Петрова</span>
-							</a>
-						</li>
-						<li class="slider-item">
-							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
-								<span class="slider-item-ico"><i class="ico ico-user"></i></span>
-								<span class="slider-item-title">Светлана Петрова</span>
-							</a>
-						</li>
-						<li class="slider-item">
-							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
-								<span class="slider-item-ico"><i class="ico ico-user"></i></span>
-								<span class="slider-item-title">Светлана Петрова</span>
-							</a>
-						</li>
-						<li class="slider-item">
-							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
-								<span class="slider-item-ico"><i class="ico ico-user"></i></span>
-								<span class="slider-item-title">Светлана Петрова</span>
-							</a>
-						</li>
-						<li class="slider-item">
-							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
-								<span class="slider-item-ico"><i class="ico ico-user"></i></span>
-								<span class="slider-item-title">Светлана Петрова</span>
-							</a>
-						</li>
-						<li class="slider-item">
-							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
-								<span class="slider-item-ico"><i class="ico ico-user"></i></span>
-								<span class="slider-item-title">Светлана Петрова</span>
-							</a>
-						</li>
-						<li class="slider-item">
-							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
-								<span class="slider-item-ico"><i class="ico ico-user"></i></span>
-								<span class="slider-item-title">Светлана Петрова</span>
-							</a>
-						</li>
-						<li class="slider-item">
-							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
-								<span class="slider-item-ico"><i class="ico ico-user"></i></span>
-								<span class="slider-item-title">Светлана Петрова</span>
-							</a>
-						</li>
-						<li class="slider-item">
-							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
-								<span class="slider-item-ico"><i class="ico ico-user"></i></span>
-								<span class="slider-item-title">Светлана Петрова</span>
-							</a>
-						</li>
-						<li class="slider-item">
-							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
-								<span class="slider-item-ico"><i class="ico ico-auto"></i></span>
-								<span class="slider-item-title">Устройство №2 на джипе</span>
-							</a>
-						</li>
-						<li class="slider-item">
-							<a class="slider-item-link" href="#">
-								<img class="slider-item-image" src="img/_user_slider_avatar.jpg" width="50" height="50" alt="" />
-								<span class="slider-item-ico"><i class="ico ico-present"></i></span>
-								<span class="slider-item-title">Светлана Петрова</span>
-							</a>
-						</li>
+
 					</ul>
 				</div>
 			</div>
@@ -959,8 +1104,8 @@
 
 <script type="text/javascript" src="js/jquery-1.7.js"></script>
 <!--<script type="text/javascript" src="js/jquery-1.7.min.js"></script>-->
-<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="js/jquery.slider_scroll.js"></script>
+<script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
 <script type="text/javascript" src="js/ext.js"></script>
 
 <script type="text/javascript" src="js/main.js"></script>

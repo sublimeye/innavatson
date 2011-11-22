@@ -1,7 +1,5 @@
-.nav-active-item {
-	background: #979DA0 url("../img/bg_nav_active_item_ie.png") repeat-x top;
-}
-
+html {overflow: hidden}
+.nav-active-item {background: #979DA0 url("../img/bg_nav_active_item_ie.png") repeat-x top}
 .setting-weekdays input {
 	margin-left:0;
 	margin-right: -1px;
@@ -10,4 +8,16 @@
 .nav-items li {top:-1px;}
 .nav-items a {line-height:33px;}
 
-.overflowable-knob { cursor: hand; }
+/* timeperiods 
+--------------------------------*/
+
+.time-period {
+	background: url("../img/timeline_gradients.png") repeat-x;
+}
+
+.time-period-disabled {
+	background-position: 0 -36px;
+}
+.time-period-parking {
+	background-position: 0 -18px;
+}
