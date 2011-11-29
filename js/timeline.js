@@ -5,6 +5,7 @@ IV.timeline = {
 		"timelineCalendarGrid": ".timeline-calendar-grid",
 		"timelineCalendar": ".timeline-date a",
 		"timelineCalendarSetDate": ".calendar-set-current-date",
+		"timelineSlider": ".timeline-main-slider",
 		"calendarProceed": ".calendar-proceed-button",
 		"calendarClose": ".calendar-close-button",
 		"dateStartD": '.timeline-date-begin--date',
@@ -24,6 +25,13 @@ IV.timeline = {
 		"closeTimeline": ".close-timeline"
 	},
 
+	/**
+	 * Special modification classes for slider
+	 */
+	sliderModifierClasses: {
+		"small": "timeline-small-slider",
+		"big": "timeline-big-slider"
+	},
 	/**
 	 * Time period classes. Should be the same as server return in region "type" attribute
 	 */
@@ -51,7 +59,9 @@ IV.timeline = {
 	 */
 	calendar: {
 		"date_start": null,
-		"date_finish": null
+		"date_finish": null,
+		"hours": null,
+		"minutes": null
 	},
 
 	calendarSliders: {
@@ -66,6 +76,7 @@ IV.timeline = {
 
 		this.setListeners();
 		this.initCalendarSliders();
+		this.initTimelineSlider();
 		this.getTimelineData(id, temp_start, temp_finish);
 	},
 
@@ -81,7 +92,7 @@ IV.timeline = {
 		 * Notify regions update
 		 */
 		notifyRegions.bind('click.notify_regions', function(e) {
-			_t.notifyCorrection(e.currentTarget);
+			_t.notifyCorrection(e.target);
 			e.preventDefault();
 		});
 
@@ -117,7 +128,7 @@ IV.timeline = {
 		/* update timeline with new date & time from calendar */
 		$(this.el.calendarProceed).bind('click.calendar_apply_date', function() {
 			$(_t.el.timelineCalendarContainer).css("visibility", "hidden");
-			_t.calendarUpdateTimeline();
+			_t.calendarUpdateTimeline(calendar);
 			calendar = false;
 			return false
 		});
@@ -177,7 +188,7 @@ IV.timeline = {
 			},
 			success: function(data, status, jqXHR) {
 				if (status === "success") {
-					console.log('Request successful');
+					console.log('Request successful.', " id: ", _id, " start: ", _dateStart, " finish: ", _dateFinish);
 					_t.updateLocalData(data);
 					_t.updateTimeline();
 				}
@@ -212,8 +223,8 @@ IV.timeline = {
 	updateNotifications: function() {
 		var el = this.el,
 				da = this.data,
-				notifyStart = da.notify.date_start ? this.dDate(da.notify.date_start) : null,
-				notifyFinish = da.notify.date_finish ? this.dDate(da.notify.date_finish) : null,
+				notifyStart = da.notify.date_start ? this.dDate(da.notify.date_start) : false,
+				notifyFinish = da.notify.date_finish ? this.dDate(da.notify.date_finish) : false,
 				calendarStartD = this.dDate(da.date_start),
 				calendarFinishD = this.dDate(da.date_finish),
 				calendarStartT = this.dTime(da.date_start),
@@ -253,10 +264,7 @@ IV.timeline = {
 
 		/** replace working-data date with notify date */
 		this.data[attr] = this.data.notify[attr];
-
-//		TODO: development version only, replace with blank getTimelineData
-//		this.getTimelineData();
-		this.getTimelineData(20);
+		this.getTimelineData();
 	},
 
 	/**
@@ -301,13 +309,18 @@ IV.timeline = {
 		var periods = this.data.periods,
 				totalTime = this.data.date_finish - this.data.date_start,
 				$collection = $(),
-				width,
-				leftPos;
+				width = 0,
+				leftPos = 0,
+				title = '';
 
 		for (var i=0, len = periods.length; i < len; i++) {
-			var li = document.createElement('li');
+			var li = document.createElement('li'),
+					a = document.createElement('a');
 
 			li.className = this.timePeriodClasses[ periods[i].type ];
+
+			/* Generating data for tooltip title */
+			title = "С " + this.dTime(periods[i].start) + " до " + this.dTime(periods[i].finish);
 
 			/* determine width in percentage of region */
 			width = periods[i].finish - periods[i].start;
@@ -319,6 +332,9 @@ IV.timeline = {
 
 			li.style.width = width + "%";
 			li.style.left = leftPos + "%";
+			a.title = title;
+			$(li).append($(a));
+//			li.title = title;
 
 			$collection = $collection.add($(li));
 		}
@@ -341,7 +357,8 @@ IV.timeline = {
 		$.each($labels, function(i, label) {
 			datePeriod += totalHours;
 			date = new Date(datePeriod);
-			date = this.formatDate( date.getHours() ) + ':' + this.formatDate( date.getMinutes() );
+			date = this.dTime(date);
+//			date = this.formatDate( date.getHours() ) + ':' + this.formatDate( date.getMinutes() );
 
 			label.innerHTML = date;
 		}.bind(this));
@@ -365,15 +382,19 @@ IV.timeline = {
 		hours.slider({
 			min: hoursValues[0],
 			max: hoursValues[1],
+			range: 'min',
 			step: 1,
 			value: 16,
 			change: function(e, ui) {
 				var val = ui.value;
+				_t.calendar.hours = val;
 				val = _t.formatDate(val);
 				hoursO.text(val);
+
 			},
 			slide: function(e, ui) {
 				var val = ui.value;
+
 				if (val > hoursValues[1] ) { val = hoursValues[1]	}
 				val = _t.formatDate(val);
 				hoursO.text(val);
@@ -383,10 +404,12 @@ IV.timeline = {
 		minutes.slider({
 			min: minutesValues[0],
 			max: minutesValues[1],
+			range: 'min',
 			step: 10,
 			value: 10,
 			change: function(e, ui) {
 				var val = ui.value;
+				_t.calendar.minutes = val;
 				val = _t.formatDate(val);
 				minutesO.text(val);
 			},
@@ -397,6 +420,13 @@ IV.timeline = {
 				minutesO.text(val);
 			}
 		});
+
+		/**
+		 * Add modification classes for slider container for correct presentation (small / big slider)
+		 */
+		hours.slider("widget").addClass(this.sliderModifierClasses.small);
+		minutes.slider("widget").addClass(this.sliderModifierClasses.small);
+
 	},
 
 	/**
@@ -469,16 +499,66 @@ IV.timeline = {
 	},
 
 	/**
-	 * update timeline
+	 * Apply changes / update timline with new date (from calendar)
 	 */
-	calendarUpdateTimeline: function() {
+	calendarUpdateTimeline: function(mode) {
 		var c = this.calendar,
-				d = this.data;
+				d = this.data,
+				time,
+				xMin = 1000 * 60,
+				xHour = xMin * 60;
 
-		if (c.date_start) { d.date_start = c.date_start.getTime() }
-		if (c.date_finish) { d.date_finish = c.date_finish.getTime() }
+		/*Converting slider's hours:minutes to milliseconds*/
+		time = ( c.hours * xHour ) + ( c.minutes * xMin );
+		/*Adding sliders time to calendar's date*/
+		c[mode] = new Date( c[mode].getTime() + time );
 
+		d[mode] = c[mode].getTime();
 		this.getTimelineData();
-	}
+	},
 
+	/**
+	 * Init timeline main slider
+	 */
+	initTimelineSlider: function() {
+		var _t = this,
+				ts = $(this.el.timelineSlider);
+
+		ts.slider({
+			min: 0,
+			max: 1000,
+			value: 500,
+			change: function(e, ui) {
+				_t.setTimelineSliderPosition(ui.value);
+			},
+			slide: function() {
+				//TODO: Display tooltip with current time position
+			}
+		});
+
+		/**
+		 * Add modification classes for slider container for correct presentation (small / big slider)
+		 */
+		ts.slider("widget").addClass(this.sliderModifierClasses.big);
+	},
+
+	/**
+	 * Proxy function. Triggered on main timeline slider change
+	 */
+	setTimelineSliderPosition: function(value) {
+		var totalTime = this.data.date_finish - this.data.date_start;
+		var positionPercentage = value * 100 / 1000;
+		var ms = totalTime * value / 1000;
+		var msShifted = ms + this.data.date_start*1;
+
+
+		var result = {
+			"Общее расстояние: ": totalTime,
+			"Текущее положение слайдера: ": value,
+			"Текущее положение слайдера в процентном соотношении: ": positionPercentage + "%",
+			"Позиция в миллисекундах (учитывая отображаемое расстояние) это: ": ms,
+			"Точный UNIX timestamp для этой позиции: ": msShifted
+		};
+
+	}
 };

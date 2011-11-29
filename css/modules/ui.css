@@ -77,8 +77,6 @@
 .ico-timeline-date { width: 27px; height: 26px; background-position: -32px -124px; }
 .timeline-date:hover .ico-timeline-date { width: 27px; height: 26px; background-position: -59px -124px; }
 
-.timeline-handler { width: 15px; height: 38px; display: block; background-position: -118px -67px; }
-
 /* active button icons
 --------------------------------*/
 .btn:active.ico-prev .ico { background-position: -42px -20px }
@@ -94,44 +92,12 @@
 
 /* bigicons
 --------------------------------*/
-.bico {
-	display: inline-block;
-	vertical-align: middle;
-	min-width: 10px;
-	min-height: 10px;
-	background: url("../../img/big_icons.png") no-repeat;
-}
-
-.bico-addzone {
-	width: 39px;
-	height: 39px;
-	background-position: -181px 0;
-}
-
-.add-zone:hover .bico-addzone {
-	width: 39px;
-	height: 39px;
-	background-position: -142px 0;
-}
-
-.bico-zone1 {
-	width: 48px;
-	height: 44px;
-	background-position: 0 0;
-}
-
-.bico-zone2 {
-	width: 47px;
-	height: 43px;
-	background-position: -48px 0;
-}
-
-.bico-zone3 {
-	width: 47px;
-	height: 35px;
-	background-position: -95px 0;
-}
-
+.bico { display: inline-block; vertical-align: middle; min-width: 10px; min-height: 10px; background: url("../../img/big_icons.png") no-repeat; }
+.bico-addzone { width: 39px; height: 39px; background-position: -181px 0; }
+.add-zone:hover .bico-addzone { width: 39px; height: 39px; background-position: -142px 0; }
+.bico-zone1 { width: 48px; height: 44px; background-position: 0 0; }
+.bico-zone2 { width: 47px; height: 43px; background-position: -48px 0; }
+.bico-zone3 { width: 47px; height: 35px; background-position: -95px 0; }
 
 /* button colors [default red button]
 --------------------------------*/
@@ -275,10 +241,7 @@ select {
 
 /* custom vertical scroll
 --------------------------------*/
-.j-scrollable {
-	clear: both;
-	position: relative;
-}
+.j-scrollable { clear: both; position: relative; }
 
 .j-scrollable .viewport {
 	position: relative;
@@ -312,7 +275,6 @@ select {
 
 	width: 9px;
 	margin-top: -3px;
-	/*height: 50%;*/
 	overflow: hidden;
 
 	cursor: pointer;
@@ -328,3 +290,38 @@ select {
 }
 .j-scrollable .thumb .end { overflow: hidden; height: 5px; width: 13px; }
 .j-scrollable .disable{ display: none; }
+
+/* Timeline slider
+--------------------------------*/
+.ui-slider { position: relative; width: 100%; }
+.timeline-main-slider-container { position: absolute; left: 0; right: 0; height: 38px; }
+
+.timeline-big-slider .ui-slider-handle { position: absolute; z-index: 200; top: -6px; cursor: pointer; width: 15px; margin-left: -7px; height: 38px; display: block; background-position: -118px -67px; }
+.timeline-small-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 200;
+	cursor: pointer;
+	width: 9px;
+	margin: -8px 0 0 -4px;
+	height: 22px;
+	display: block;
+	background-position: -86px -124px;
+}
+.ui-slider.timeline-small-slider {
+	height: 3px;
+	background: #BCC3BA;
+	-moz-border-radius: 1px;
+	border-radius: 1px;
+}
+
+.timeline-small-slider .ui-slider-range {
+	position: absolute;
+	height: 100%;
+	background: #CB4343;
+}
+.ui-slider-handle:focus { outline: 0; }
+
+/* timeline handler
+--------------------------------*/
+.timeline-handler {  }
+
