@@ -28,6 +28,7 @@ var IV = {
 
 		/* custom scrollable content */
 
+		this.timeline.init();
 		/* modules */
 		this.devices.init();
 
@@ -69,15 +70,15 @@ var IV = {
 			$this.parent().addClass('active').addClass('nav-active-item');
 
 			switch(idx) {
-				case 'map': $('#map, .users-slider').addClass('g-hidden'); break;
-				case 'devices': $('#devices, #users-timeline').addClass('g-hidden'); break;
+				case 'map': $('#map, #users-timeline').addClass('g-hidden'); break;
+				case 'devices': $('#devices, .users-slider').addClass('g-hidden'); break;
 				case 'zones': $('#zones, .slider--zones').addClass('g-hidden'); break;
 				case 'groups': $('#groups').addClass('g-hidden'); break;
 			}
 
 			switch(newIdx) {
-				case 'map': $('#map, .users-slider').removeClass('g-hidden'); break;
-				case 'devices': $('#devices, #users-timeline').removeClass('g-hidden'); break;
+				case 'map': $('#map, #users-timeline').removeClass('g-hidden'); break;
+				case 'devices': $('#devices, .users-slider').removeClass('g-hidden'); break;
 				case 'zones': $('#zones, .slider--zones').removeClass('g-hidden'); break;
 				case 'groups': $('#groups').removeClass('g-hidden'); break;
 			}

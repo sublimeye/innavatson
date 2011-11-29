@@ -11,13 +11,9 @@ html {overflow: hidden}
 /* timeperiods 
 --------------------------------*/
 
-.time-period {
-	background: url("../img/timeline_gradients.png") repeat-x;
+.time-periods, .time-periods li, .time-period {
+	background: url("../img/timeline_gradients.png") repeat-x 0 -36px;
 }
 
-.time-period-disabled {
-	background-position: 0 -36px;
-}
-.time-period-parking {
-	background-position: 0 -18px;
-}
+.time-periods .time-period-enabled { background-position: 0 0; }
+.time-periods .time-period-parking { background-position: 0 -18px; }

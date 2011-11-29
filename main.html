@@ -6,6 +6,9 @@
 	<title>screen04</title>
 	<link href='css/main.css' rel="stylesheet" type="text/css" />
 
+	<link href='css/jquery-ui-1.8.16.custom.css' rel="stylesheet" type="text/css" />
+	<link href='css/datepicker.css' rel="stylesheet" type="text/css" />
+
 	<!--[if IE 8]><link rel="stylesheet" type="text/css" href='css/ie8.css' /><![endif]-->
 	<!--[if IE]><link rel="stylesheet" type="text/css" href='css/ie.css' /><![endif]-->
 
@@ -799,20 +802,33 @@
 		</div>
 	</div>
 	<div class="page-bot">
-	<div id="users-timeline" class="timeline g-hidden">
+	<div id="users-timeline" class="timeline">
 		<div class="timeline-outer">
 			<div class="timeline-info">
 				<div class="close-timeline"><a href="#">Скрыть трек <i class="ico ico-close-timeline"></i></a></div>
-				<div class="fl-left">Устройство 2: История <a href="#" class="timeline-caution"><i class="ico ico-caution"></i></a>
-					<span class="timeline-borders-label">Границы периодов активности:</span>
-					<span class="busy-period"><i class="ico ico-prev-period"></i>20.09</span> &ndash; <span class="busy-period">30.09<i class="ico ico-next-period"></i></span></div>
+				<div class="fl-left"><span class="timeline-device-name">Устройство 2: История</span>
+					<span class="timeline-notify">
+						<span class="timeline-borders-label"><i class="ico ico-caution"></i><span class="timeline-caution">Границы периодов активности:</span></span>
+						<span class="busy-period timeline-notify-start"><i class="ico ico-prev-period"></i><a class="timeline-notify-date" href="#start_date" rel="date_start">20.09</a></span><span class="timeline-notify-dash">&ndash;</span><span class="busy-period timeline-notify-finish"><a class="timeline-notify-date" href="#finish_date" rel="date_finish">30.09</a><i class="ico ico-next-period"></i></span>
+					</span>
+				</div>
 			</div>
 			<div class="timeline-grid clearfix">
 				<div class="timeline-date timeline-date-begin">
-					<a href="#"><span><b>31.09</b></span><br/><span>23:23</span><i class="ico ico-timeline-date"></i></a>
+					<a href="#from_date" rel="date_start">
+						<span><b class="timeline-date-begin--date">31.09</b></span><br/><span class="timeline-date-begin--time">23:23</span>
+						<i class="ico ico-timeline-date"></i>
+						<!--<input type="hidden" class="calendar_from" style="z-index: 999" />-->
+					</a>
 				</div>
+
 				<div class="timeline-date timeline-date-end">
-					<a href="#"><span><b>26.10</b></span><br/><span>05:09</span><i class="ico ico-timeline-date"></i></a>
+					<a href="#to_date" rel="date_finish">
+						<span><b class="timeline-date-finish--date">26.10</b></span><br/><span class="timeline-date-finish--time">05:09</span>
+						<i class="ico ico-timeline-date"></i>
+						<!--<input type="hidden" class="calendar_to" />-->
+					</a>
+
 				</div>
 				<div class="timeline-inner clearfix">
 					<!-- координаты прописаны в css только для наглядности, позиционирование происходит через CSS -->
@@ -821,20 +837,28 @@
 
 						<!--  -->
 						<ul class="time-periods">
+<!--
 							<li class="time-period time-period-disabled" style="width: 5%; left: 0"></li>
 							<li class="time-period time-period-enabled" style="width: 15%; left: 5%"></li>
 							<li class="time-period time-period-parking" style="width: 36%; left: 19.9%"></li>
 							<li class="time-period time-period-enabled" style="width: 21%; left: 55%"></li>
 							<li class="time-period time-period-parking" style="width: 10%; left: 75%"></li>
 							<li class="time-period time-period-disabled" style="width: 15%; left: 85%"></li>
+-->
 						</ul>
 
 						<ul class="time-labels">
-							<li class="time-label" style="left: 16.6%">12:00</li>
-							<li class="time-label" style="left: 33.2%">15:00</li>
-							<li class="time-label" style="left: 49.8%">18:00</li>
-							<li class="time-label" style="left: 66.4%">0:00</li>
-							<li class="time-label" style="left: 83%">3:00</li>
+							<li class="time-label time-label--1">12:00</li>
+							<li class="time-label time-label--2">15:00</li>
+							<li class="time-label time-label--3">18:00</li>
+							<li class="time-label time-label--4">0:00</li>
+							<li class="time-label time-label--5">3:00</li>
+							<li class="time-label time-label--6">3:00</li>
+							<li class="time-label time-label--7">3:00</li>
+							<li class="time-label time-label--8">3:00</li>
+							<li class="time-label time-label--9">3:00</li>
+							<li class="time-label time-label--10">3:00</li>
+							<li class="time-label time-label--11">3:00</li>
 						</ul>
 
 					</div>
@@ -848,10 +872,44 @@
 				</ul>
 				<p class="timeline-history">Максимальный непрерывный период истории: <span class="timeline-htime">72 часа (3 суток)</span></p>
 			</div>
+			<div class="timeline-calendar-container">
+				<div class="timeline-calendar-grid"></div>
+				<div class="timeline-calendar-details"></div>
+				<div class="calendar-time">
+					Время: <span class="calendar-time-hours">13</span>:<span class="calendar-time-minutes">30</span>
+					<div class="btn btn--small calendar-set-current-date">
+						<button>Сегодня и сейчас</button>
+					</div>
+				</div>
+
+				<table class="calendar-time-slider">
+					<colgroup>
+						<col width="10"/>
+						<col />
+					</colgroup>
+					<tr>
+						<td>Часы:</td>
+						<td>
+							<div class="calendar-hours-slider"></div></td>
+					</tr>
+					<tr>
+						<td>Минуты:</td>
+						<td>
+							<div class="calendar-minutes-slider"></div></td>
+					</tr>
+				</table>
+
+				<div class="btn fl-right calendar-proceed-button">
+					<button>Показать</button>
+				</div>
+				<div class="btn btn--grey fl-left calendar-close-button">
+					<button>Отмена</button>
+				</div>
+			</div>
 		</div>
 	</div>
 		<!--additional blocks-->
-		<div id="users-slider" class="slider users-slider g-ns_children">
+		<div id="users-slider" class="slider g-hidden users-slider g-ns_children">
 			<div class="slider-outer">
 				<div class="slider-inner">
 					<ul class="slider-list">
@@ -1102,15 +1160,26 @@
 		</div>
 	</div>
 
+<!-- core -->
 <script type="text/javascript" src="js/jquery-1.7.js"></script>
-<!--<script type="text/javascript" src="js/jquery-1.7.min.js"></script>-->
+<script type="text/javascript" src="js/jquery.ui.core.js"></script>
+<!-- jquery extensions -->
+<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="js/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="js/jquery.ui.slider.js"></script>
+<!--<script type="text/javascript" src="js/jquery.ui.core.js"></script>-->
+<!--<script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>-->
+<!-- custom extensions -->
+<script type="text/javascript" src="js/datepicker.js"></script>
+
 <script type="text/javascript" src="js/jquery.slider_scroll.js"></script>
 <script type="text/javascript" src="js/jquery.tinyscrollbar.min.js"></script>
 <script type="text/javascript" src="js/ext.js"></script>
-
+<!-- modules -->
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/devices.js"></script>
-<!--<script type="text/javascript" src="js/map.js"></script>-->
+<script type="text/javascript" src="js/timeline.js"></script>
+
 <!--<script type="text/javascript" src="js/zones.js"></script>-->
 <!--<script type="text/javascript" src="js/groups.js"></script>-->
 
