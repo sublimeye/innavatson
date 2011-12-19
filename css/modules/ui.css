@@ -6,7 +6,7 @@
 .btn, .btn button { -moz-border-radius: 5px; border-radius: 5px; }
 .btn { display: inline-block; border: 2px solid #F3F5F3; box-shadow: 0 2px 3px #DFDFDF; overflow: hidden; }
 .btn button { border: 0; line-height: 1.9em; padding: 0 1em; }
-.btn button { height: 1.9em; } /* FF 4+ */
+.btn button { /*height: 1.9em;*/ } /* FF 4+ */
 .btn.btn--small { font-size: 11px; font-size: 1.1rem; }
 
 /* Button icons
@@ -44,7 +44,8 @@
 .ico-groups { width: 26px; height: 25px; background-position: -71px -79px; }
 .ico-user { width: 21px; height: 26px; background-position:-97px -79px; }
 
-.ico-close { width: 21px; height: 20px; background-position: -63px 0; }
+/*.ico-close { width: 21px; height: 20px; background-position: -63px 0; }*/
+.ico-close { width: 21px; height: 20px; background-position: -105px 0; }
 .ico-edit { width: 15px; height: 16px; background-position: -17px -105px; }
 .ico-ordering { margin-left: 5px; width: 6px; height: 18px; background-position:-32px -105px; }
 .ico-coins { width: 14px; height: 18px; margin-left: 1em;background-position: -83px -40px; }
@@ -187,7 +188,7 @@ select {
 --------------------------------*/
 .w-popup { position: absolute; top: 60%; left: 50%; z-index: 999; width: 230px; }
 .w-popup-wide { width: 320px; }
-.w-popup-inner { width: 100%; background: #C63A3A; -moz-border-radius: 10px; border-radius: 10px; overflow: hidden; padding-bottom: 6px; box-shadow: 0 2px 5px #E3E3E3 }
+.w-popup-inner { position: relative; width: 100%; background: #C63A3A; -moz-border-radius: 10px; border-radius: 10px; /*overflow: hidden;*/ padding-bottom: 6px; box-shadow: 0 2px 5px rgba(100, 100, 100, .6) }
 .w-popup-title { height: 32px; color: #fff; line-height: 32px; padding-left: 16px; }
 .w-popup-content { font-size: 12px; font-size: 1.2rem; background: #fff; padding: 16px; }
 .w-popup-close { position: absolute; right: 10px; top: 6px; cursor: pointer; }
@@ -210,6 +211,8 @@ select {
 .w-notify-last { color: #363636; }
 .w-notify-last .date { color: #569a2d; line-height: 12px; }
 .w-notify-charge { float: right; width: 30px; margin-left: 10px; background: url('../../img/charge.png') no-repeat center top; padding-top: 35px; text-align: center; color: #b23939; }
+
+.w-popup-wpointer .w-popup-inner:after { content: ''; display: block; position: absolute; left: 0; bottom: -23px; background: url("../../img/wpointer.png"); width: 239px; height: 29px; }
 
 /* notifier
 --------------------------------*/

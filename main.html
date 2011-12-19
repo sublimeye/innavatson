@@ -36,7 +36,7 @@
 
 
 			<div id="map" class="map-container map-container--wide section">
-				<div class="w-popup w-popup-wide g-hidden">
+				<div class="w-popup w-popup-wide w-popup-wpointer">
 					<div class="w-popup-inner">
 						<div class="w-popup-close">
 							<i class="ico ico-close"></i>
@@ -873,7 +873,7 @@
 				<div class="timeline-calendar-grid"></div>
 				<div class="timeline-calendar-details"></div>
 				<div class="calendar-time">
-					Время: <span class="calendar-time-hours">13</span>:<span class="calendar-time-minutes">30</span>
+					<span class="calendar-time-title">Время:</span> <span class="calendar-time-hours">13</span>:<span class="calendar-time-minutes">30</span>
 					<div class="btn btn--small calendar-set-current-date">
 						<button>Сегодня и сейчас</button>
 					</div>
@@ -1156,6 +1156,27 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="w-popup w-confirm g-hidden">
+		<div class="w-popup-inner">
+			<div class="w-popup-close"><i class="ico ico-close"></i></div>
+			<div class="w-popup-title grad-red">Удаление группы</div>
+			<div class="w-popup-content clearfix">
+				<p>Вы хотите удалить группу <span class="del-group-title">Группа 1</span>?</p>
+
+				<div class="wider">
+					<div class="btn fl-left btn--grey">
+						<button>Отмена</button>
+					</div>
+					<div class="btn fl-right btn--green">
+						<button>Подтвердить</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
 
 <!-- core -->
 <script type="text/javascript" src="js/jquery-1.7.js"></script>

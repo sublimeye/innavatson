@@ -139,14 +139,40 @@
 /* calendar time sliders
 --------------------------------*/
 .calendar-time-slider {
+	margin: 10px 0;
 	width: 100%;
 }
 
 .calendar-time-slider  td:first-child {
+	font-size: 11px;
+	color: #282828;
 	padding-right: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 .calendar-time-slider dd {
 	float: left;
 	outline: 1px solid red;
+}
+
+.calendar-time {
+	color: #282828;
+	font-size: 12px;
+}
+
+.calendar-time-title {
+	font-size: 12px;
+	color: #c24949;
+}
+
+/* set date button
+--------------------------------*/
+.calendar-set-current-date {
+	float: right;
+	vertical-align: middle;
+}
+
+.calendar-set-current-date button {
+	padding: 0 0.4em !important;
 }
