@@ -43,11 +43,28 @@
 						</div>
 						<div class="w-popup-title grad-red">
 							<ul class="tabs">
-								<li class="active"><a href="#">Информация</a></li>
-								<li><a href="#">История</a></li>
+								<li><a href="#">Информация</a></li>
+								<li class="active"><a href="#">История</a></li>
 							</ul>
 						</div>
 						<div class="w-popup-content clearfix">
+							<p>За предыдущий период:</p>
+
+							<div class="w-history-labels clearfix">
+								<label><input type="radio" name="history-time-period"/> 1 час</label>
+								<label><input type="radio" name="history-time-period"/> 24 часа (сутки)</label>
+								<label><input type="radio" name="history-time-period"/> 12 часов (день)</label>
+								<label><input type="radio" name="history-time-period"/> 72 часа (трое суток)</label>
+							</div>
+
+							<div class="w-history-note">
+								<div class="btn fl-right">
+									<button>Показать</button>
+								</div>
+								<p>На открывающейся временной шкале вы можете точнее настроить период</p>
+							</div>
+						</div>
+						<div class="w-popup-content clearfix g-hidden">
 							<div class="w-notify-charge">60%</div>
 							<div class="w-notify-user">
 								<div class="user-avatar">
@@ -67,6 +84,13 @@
 						</div>
 					</div>
 				</div><!--//w-popup-->
+
+				<!-- tooltip/helper -->
+				<div class="w-simple-tooltip">
+					<div class="w-simple-tooltip-inner">
+						<p>29.10.2011 / 14:56:11 <span class="">25 км/ч</span></p>
+					</div>
+				</div>
 				<img src="img/_map.png"  alt="" />
 			</div>
 		<!--//map-->

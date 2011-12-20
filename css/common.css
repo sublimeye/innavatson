@@ -39,7 +39,7 @@ body {min-height: 600px}
 	overflow-y: auto;
 }
 
-.g-hidden { display: none; }
+.g-hidden { display: none !important; }
 .g-center {text-align: center}
 .g-ns, .g-ns_children * { -webkit-user-select:none; -moz-user-select:-moz-none; -o-user-select:none; user-select:none; outline: none}
 
