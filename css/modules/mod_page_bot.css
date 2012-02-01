@@ -120,10 +120,12 @@
 	visibility: hidden;
 	position: absolute;
 	bottom: 150px;
-	padding: 0 10px;
+	padding: 0 0 18px;
 	z-index: 999;
 	background: white;
-	outline: 3px solid red;
+	border-radius: 10px;
+	overflow: hidden;
+	position: absolute;
 }
 
 .timeline-calendar-container.date_start {

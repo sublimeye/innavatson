@@ -21,9 +21,9 @@
 					'<table cellspacing="0" cellpadding="0">',
 						'<thead>',
 							'<tr>',
-								'<th class="datepickerGoPrev"><a href="#"><span><%=prev%></span></a></th>',
-								'<th colspan="6" class="datepickerMonth"><a href="#"><span></span></a></th>',
-								'<th class="datepickerGoNext"><a href="#"><span><%=next%></span></a></th>',
+								'<th class="datepickerGoPrev"><a class="ico ico-prev-mnth" href="#"></a></th>',
+								'<th colspan="5" class="datepickerMonth"><a href="#"><span></span></a></th>',
+								'<th class="datepickerGoNext"><a class="ico ico-next-mnth" href="#"></a></th>',
 							'</tr>',
 							'<tr class="datepickerDoW">',
 								'',
@@ -42,7 +42,7 @@
 				days: [
 					'<tbody class="datepickerDays">',
 						'<tr>',
-							'<th class="datepickerWeek"><a href="#"><span><%=weeks[0].week%></span></a></th>',
+							'',
 							'<td class="<%=weeks[0].days[0].classname%>"><a href="#"><span><%=weeks[0].days[0].text%></span></a></td>',
 							'<td class="<%=weeks[0].days[1].classname%>"><a href="#"><span><%=weeks[0].days[1].text%></span></a></td>',
 							'<td class="<%=weeks[0].days[2].classname%>"><a href="#"><span><%=weeks[0].days[2].text%></span></a></td>',
@@ -52,7 +52,7 @@
 							'<td class="<%=weeks[0].days[6].classname%>"><a href="#"><span><%=weeks[0].days[6].text%></span></a></td>',
 						'</tr>',
 						'<tr>',
-							'<th class="datepickerWeek"><a href="#"><span><%=weeks[1].week%></span></a></th>',
+							'',
 							'<td class="<%=weeks[1].days[0].classname%>"><a href="#"><span><%=weeks[1].days[0].text%></span></a></td>',
 							'<td class="<%=weeks[1].days[1].classname%>"><a href="#"><span><%=weeks[1].days[1].text%></span></a></td>',
 							'<td class="<%=weeks[1].days[2].classname%>"><a href="#"><span><%=weeks[1].days[2].text%></span></a></td>',
@@ -62,7 +62,7 @@
 							'<td class="<%=weeks[1].days[6].classname%>"><a href="#"><span><%=weeks[1].days[6].text%></span></a></td>',
 						'</tr>',
 						'<tr>',
-							'<th class="datepickerWeek"><a href="#"><span><%=weeks[2].week%></span></a></th>',
+							'',
 							'<td class="<%=weeks[2].days[0].classname%>"><a href="#"><span><%=weeks[2].days[0].text%></span></a></td>',
 							'<td class="<%=weeks[2].days[1].classname%>"><a href="#"><span><%=weeks[2].days[1].text%></span></a></td>',
 							'<td class="<%=weeks[2].days[2].classname%>"><a href="#"><span><%=weeks[2].days[2].text%></span></a></td>',
@@ -72,7 +72,7 @@
 							'<td class="<%=weeks[2].days[6].classname%>"><a href="#"><span><%=weeks[2].days[6].text%></span></a></td>',
 						'</tr>',
 						'<tr>',
-							'<th class="datepickerWeek"><a href="#"><span><%=weeks[3].week%></span></a></th>',
+							'',
 							'<td class="<%=weeks[3].days[0].classname%>"><a href="#"><span><%=weeks[3].days[0].text%></span></a></td>',
 							'<td class="<%=weeks[3].days[1].classname%>"><a href="#"><span><%=weeks[3].days[1].text%></span></a></td>',
 							'<td class="<%=weeks[3].days[2].classname%>"><a href="#"><span><%=weeks[3].days[2].text%></span></a></td>',
@@ -82,7 +82,7 @@
 							'<td class="<%=weeks[3].days[6].classname%>"><a href="#"><span><%=weeks[3].days[6].text%></span></a></td>',
 						'</tr>',
 						'<tr>',
-							'<th class="datepickerWeek"><a href="#"><span><%=weeks[4].week%></span></a></th>',
+							'',
 							'<td class="<%=weeks[4].days[0].classname%>"><a href="#"><span><%=weeks[4].days[0].text%></span></a></td>',
 							'<td class="<%=weeks[4].days[1].classname%>"><a href="#"><span><%=weeks[4].days[1].text%></span></a></td>',
 							'<td class="<%=weeks[4].days[2].classname%>"><a href="#"><span><%=weeks[4].days[2].text%></span></a></td>',
@@ -92,7 +92,7 @@
 							'<td class="<%=weeks[4].days[6].classname%>"><a href="#"><span><%=weeks[4].days[6].text%></span></a></td>',
 						'</tr>',
 						'<tr>',
-							'<th class="datepickerWeek"><a href="#"><span><%=weeks[5].week%></span></a></th>',
+							'',
 							'<td class="<%=weeks[5].days[0].classname%>"><a href="#"><span><%=weeks[5].days[0].text%></span></a></td>',
 							'<td class="<%=weeks[5].days[1].classname%>"><a href="#"><span><%=weeks[5].days[1].text%></span></a></td>',
 							'<td class="<%=weeks[5].days[2].classname%>"><a href="#"><span><%=weeks[5].days[2].text%></span></a></td>',
@@ -144,12 +144,12 @@
 				onBeforeShow: function(){return true;},
 				onHide: function(){return true;},
 				locale: {
-					days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-					daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-					daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
-					months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-					monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-					weekMin: 'wk'
+					days: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
+					daysShort: ["вс", "пн", "вт", "ср", "чт", "пт", "сб", "вс"],
+					daysMin: ["вс", "пн", "вт", "ср", "чт", "пт", "сб", "вс"],
+					months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+					monthsShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+					weekMin: 'Нед'
 				}
 			},
 			fill = function(el) {
@@ -741,7 +741,7 @@
 								html += tpl.space;
 							}
 							html += tmpl(tpl.head.join(''), {
-									week: options.locale.weekMin,
+
 									prev: options.prev,
 									next: options.next,
 									day1: options.locale.daysMin[(cnt++)%7],

@@ -69,6 +69,19 @@
 .ico-confirm .ico { background-position: 0 0 }
 .ico-add .ico { background-position: -84px 0 }
 
+/* datepicker
+--------------------------------*/
+.timeline-calendar-grid div.datepicker .ico-prev-mnth {
+	background: url("../../img/small_icons.png") no-repeat -42px 0;
+	width: 21px;
+	height: 20px;
+}
+.timeline-calendar-grid div.datepicker .ico-next-mnth {
+	background: url("../../img/small_icons.png") no-repeat -21px 0;
+	width: 21px;
+	height: 20px;
+}
+
 /* timeline icons
 --------------------------------*/
 .ico-close-timeline { width: 17px; height: 17px; background-position: -101px -105px; margin-left: 5px}
@@ -369,3 +382,54 @@ select {
 
 /* timeline handler
 --------------------------------*/
+.timeline-calendar-grid {
+	position: relative;
+	-moz-border-radius: 5px;
+	border-radius: 10px;
+}
+
+.timeline-calendar-details {
+	/*position: relative;*/
+	margin: 0 10px;
+}
+
+.timeline-calendar-grid:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 31px;
+	border-top: 1px solid #CD4747;
+
+	background: rgb(215,110,110);
+	background: -moz-linear-gradient(top,  rgba(215,110,110,1) 0%, rgba(210,93,93,1) 50%, rgba(204,70,70,1) 50%, rgba(204,70,70,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(215,110,110,1)), color-stop(50%,rgba(210,93,93,1)), color-stop(50%,rgba(204,70,70,1)), color-stop(100%,rgba(204,70,70,1)));
+	background: -webkit-linear-gradient(top,  rgba(215,110,110,1) 0%,rgba(210,93,93,1) 50%,rgba(204,70,70,1) 50%,rgba(204,70,70,1) 100%);
+	background: -o-linear-gradient(top,  rgba(215,110,110,1) 0%,rgba(210,93,93,1) 50%,rgba(204,70,70,1) 50%,rgba(204,70,70,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(215,110,110,1) 0%,rgba(210,93,93,1) 50%,rgba(204,70,70,1) 50%,rgba(204,70,70,1) 100%);
+	background: linear-gradient(top,  rgba(215,110,110,1) 0%,rgba(210,93,93,1) 50%,rgba(204,70,70,1) 50%,rgba(204,70,70,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d76e6e', endColorstr='#cc4646',GradientType=0 );
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.timeline-calendar-details:after {
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	padding-right: 20px;
+	content: '';
+	height: 7px;
+	bottom: 0;
+
+-webkit-border-bottom-right-radius: 8px;
+-webkit-border-bottom-left-radius: 8px;
+-moz-border-radius-bottomright: 8px;
+-moz-border-radius-bottomleft: 8px;
+border-bottom-right-radius: 8px;
+border-bottom-left-radius: 8px;
+	background: #C73F3E;
+}

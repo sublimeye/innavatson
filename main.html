@@ -895,37 +895,44 @@
 			</div>
 			<div class="timeline-calendar-container">
 				<div class="timeline-calendar-grid"></div>
-				<div class="timeline-calendar-details"></div>
-				<div class="calendar-time">
-					<span class="calendar-time-title">Время:</span> <span class="calendar-time-hours">13</span>:<span class="calendar-time-minutes">30</span>
-					<div class="btn btn--small calendar-set-current-date">
-						<button>Сегодня и сейчас</button>
+				<div class="timeline-calendar-details cf">
+
+					<div class="calendar-time">
+						<span class="calendar-time-title">Время:</span>
+						<span class="calendar-time-hours">13</span>:<span class="calendar-time-minutes">30</span>
+
+						<div class="btn btn--small calendar-set-current-date">
+							<button>Сегодня и сейчас</button>
+						</div>
+					</div>
+
+					<table class="calendar-time-slider">
+						<colgroup>
+							<col width="10"/>
+							<col/>
+						</colgroup>
+						<tr>
+							<td>Часы:</td>
+							<td>
+								<div class="calendar-hours-slider"></div>
+							</td>
+						</tr>
+						<tr>
+							<td>Минуты:</td>
+							<td>
+								<div class="calendar-minutes-slider"></div>
+							</td>
+						</tr>
+					</table>
+
+					<div class="btn fl-right calendar-proceed-button">
+						<button>Показать</button>
+					</div>
+					<div class="btn btn--grey fl-left calendar-close-button">
+						<button>Отмена</button>
 					</div>
 				</div>
 
-				<table class="calendar-time-slider">
-					<colgroup>
-						<col width="10"/>
-						<col />
-					</colgroup>
-					<tr>
-						<td>Часы:</td>
-						<td>
-							<div class="calendar-hours-slider"></div></td>
-					</tr>
-					<tr>
-						<td>Минуты:</td>
-						<td>
-							<div class="calendar-minutes-slider"></div></td>
-					</tr>
-				</table>
-
-				<div class="btn fl-right calendar-proceed-button">
-					<button>Показать</button>
-				</div>
-				<div class="btn btn--grey fl-left calendar-close-button">
-					<button>Отмена</button>
-				</div>
 			</div>
 		</div>
 	</div>

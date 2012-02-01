@@ -390,7 +390,6 @@ IV.timeline = {
 				_t.calendar.hours = val;
 				val = _t.formatDate(val);
 				hoursO.text(val);
-
 			},
 			slide: function(e, ui) {
 				var val = ui.value;
