@@ -235,6 +235,7 @@ IV.timeline = {
 
 		//if exists - update notification
 		if (da.notify.message) {
+			$(el.notify).show();
 			$(el.notifyMessage).text( da.notify.message );
 
 			if (notifyStart) { $(el.notifyStart).text( notifyStart ); }
@@ -454,17 +455,18 @@ IV.timeline = {
 
 		date = this.dDate(date) + '.' + date.getFullYear();
 
-//		dp.empty();
 		dp.empty().DatePicker({
 			flat: true,
 			format: 'd.m.Y',
-			date: date,
+			date: '10.10.2011',
 			calendars: 1,
 			start: 1,
 			onChange: function(formatted, date, dp) {
 				_t.calendar[mode] = date;
 			}
 		});
+
+		dp.DatePickerSetDate(date, true);
 
 		/* store initial values of calendar date */
 		_t.calendar[mode] = dp.DatePickerGetDate();

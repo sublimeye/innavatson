@@ -145,10 +145,11 @@ div.datepicker tbody a {
 	height: 36px;
 	text-align: center;
 }
-td.datepickerNotInMonth a {
+div.datepicker .datepickerDays .datepickerNotInMonth a {
 	color: #666;
+	background: none;
 }
-tbody.datepickerDays td.datepickerSelected a {
+div.datepicker tbody.datepickerDays td.datepickerSelected a {
 background: rgb(213,122,122);
 background: -moz-linear-gradient(top,  rgba(213,122,122,1) 0%, rgba(212,105,105,1) 50%, rgba(204,70,70,1) 50%, rgba(204,70,70,1) 100%);
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(213,122,122,1)), color-stop(50%,rgba(212,105,105,1)), color-stop(50%,rgba(204,70,70,1)), color-stop(100%,rgba(204,70,70,1)));
@@ -163,11 +164,22 @@ border-top: 1px solid #AA1E1D;
 }
 
 tbody.datepickerDays td.datepickerSelected a {
+    color: #fff;
 
 }
 
 tbody.datepickerDays td.datepickerNotInMonth.datepickerSelected {
 	background: #17384d;
+
+background: rgb(213,122,122);
+background: -moz-linear-gradient(top,  rgba(213,122,122,1) 0%, rgba(212,105,105,1) 50%, rgba(204,70,70,1) 50%, rgba(204,70,70,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(213,122,122,1)), color-stop(50%,rgba(212,105,105,1)), color-stop(50%,rgba(204,70,70,1)), color-stop(100%,rgba(204,70,70,1)));
+background: -webkit-linear-gradient(top,  rgba(213,122,122,1) 0%,rgba(212,105,105,1) 50%,rgba(204,70,70,1) 50%,rgba(204,70,70,1) 100%);
+background: -o-linear-gradient(top,  rgba(213,122,122,1) 0%,rgba(212,105,105,1) 50%,rgba(204,70,70,1) 50%,rgba(204,70,70,1) 100%);
+background: -ms-linear-gradient(top,  rgba(213,122,122,1) 0%,rgba(212,105,105,1) 50%,rgba(204,70,70,1) 50%,rgba(204,70,70,1) 100%);
+background: linear-gradient(top,  rgba(213,122,122,1) 0%,rgba(212,105,105,1) 50%,rgba(204,70,70,1) 50%,rgba(204,70,70,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d57a7a', endColorstr='#cc4646',GradientType=0 );
+
 }
 tbody.datepickerYears td.datepickerSelected,
 tbody.datepickerMonths td.datepickerSelected{
