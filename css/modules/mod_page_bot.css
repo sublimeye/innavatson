@@ -18,7 +18,7 @@
 /* timeline
 --------------------------------*/
 .timeline { position: relative; height: 119px; margin: 0 5px; }
-.timeline-outer { padding: 0 10px; height: 98px; background: #fff; outline: 1px solid blue; }
+.timeline-outer { padding: 0 10px; height: 98px; background: #fff; }
 
 /* close timeline button
 --------------------------------*/
@@ -153,7 +153,6 @@
 
 .calendar-time-slider dd {
 	float: left;
-	outline: 1px solid red;
 }
 
 .calendar-time {
