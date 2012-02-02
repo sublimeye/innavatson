@@ -123,7 +123,6 @@
 	padding: 0 0 18px;
 	z-index: 999;
 	background: white;
-	border-radius: 10px;
 	overflow: hidden;
 	position: absolute;
 }
@@ -142,19 +141,30 @@
 --------------------------------*/
 .calendar-time-slider {
 	margin: 10px 0;
-	width: 100%;
+	width: 200px;
 }
 
-.calendar-time-slider  td:first-child {
-	font-size: 11px;
-	color: #282828;
-	padding-right: 5px;
-	padding-bottom: 5px;
-	margin-bottom: 10px;
+.calendar-time-slider dt {
+	clear: left;
+	float: left;
+	width: 50px;
+	height: 20px;
 }
 
 .calendar-time-slider dd {
+	width: 135px;
 	float: left;
+	margin-bottom: 15px;
+	/*outline: 1px solid red;*/
+;
+	padding: 5px 0 3px 0;
+}
+
+.calendar-time-slider  dt {
+	font-size: 11px;
+	color: #282828;
+	padding-right: 5px;
+	/*padding-bottom: 5px;*/
 }
 
 .calendar-time {
